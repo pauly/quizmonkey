@@ -1,0 +1,728 @@
+- German vocab
+
+# Question can be of two formats, either
+# - - what is 2 + 2?
+#   - 4 (correct answer goes first)
+#   - 5 (optional incorrect answers follow)
+#   - 22 (any number of incorrect answers)
+#
+# or
+# 
+# - - question: what is 2 + 2?
+#     answers:
+#     - 4 (corect answer still goes first)
+#     - 5
+#     - 22
+#     trivia: The King's Speech
+#
+# First option saves space but is less flexible
+
+- - - cat
+    - die Katze
+    - die Katz
+    - der Katze
+    - der Katz
+
+  - - cats
+    - die Katzen
+    - die Katze
+
+  - - I am hot
+    - mir ist heiß
+    - es ist heiß
+    - ich bin heiß
+
+  - - I eat
+    - ich esse
+    - ich ißt
+
+  - - you eat (i)
+    - du ißt
+
+  - - he eats
+    - er ißt
+
+  - - we eat
+    - wir essen
+
+  - - you eat (pl)
+    - ihr eßt
+
+  - - they eat
+    - sie essen
+
+  - - you eat (f)
+    - Sie essen
+
+  - - I speak
+    - ich spreche
+
+  - - you speak (i)
+    - du sprichst
+
+  - - he speaks
+    - er spricht
+
+  - - she speaks
+    - sie spricht
+
+  - - it speaks
+    - es spricht
+
+  - - we speak
+    - wir sprechen
+
+  - - you speak (pl)
+    - ihr sprecht
+
+  - - you speak (f)
+    - Sie sprechen
+
+  - - I come
+    - ich komme
+
+  - - you come (i)
+    - du kommst
+
+  - - he comes
+    - er kommt
+
+  - - she comes
+    - sie kommt
+
+  - - it comes
+    - es kommt
+
+  - - we come
+    - wir kommen
+
+  - - you come (pl)
+    - ihr kommt
+
+  - - they come
+    - Sie kommen
+
+  - - dog
+    - der Hund
+    - das Hund
+    - die Hund
+
+  - - dogs
+    - die Hunde
+    - die Hunden
+
+  - - door
+    - die Tür
+    - die Tur
+    - die Ture
+
+  - - doors
+    - die Türen
+    - die Turen
+    - die Tures
+
+  - - greeting
+    - die Begrüßung
+
+  - - dismissal / farewell
+    - die Verabschiedung
+
+  - - title
+    - die Anrede
+
+  - - Good morning!
+    - Guten Morgen!
+
+  - - a greeting which can be used during the day
+    - Guten Tag!
+
+  - - Good evening!
+    - Guten Abend
+
+  - - Hello!
+    - Hallo!
+
+  - - Bye!
+    - tschüß!
+
+  - - See you later!
+    - Bis später!
+
+  - - How are you? (i)
+    - Wie geht es Dir?
+
+  - - How are you? (f)
+    - Wie geht es Ihnen?
+
+  - - 'an appropriate reply to "Wie geht es Ihnen?"'
+    - Mir geht es gut, danke
+
+  - - Merry Christmas!
+    - Frohe Weihnachten!
+
+  - - Happy New Year!
+    - Gutes Neues Jahr!
+
+  - - please
+    - bitte
+
+  - - thank you
+    - danke
+
+  - - Here you are
+    - Bitte schön
+
+  - - You are welcome
+    - Gern geschehen
+
+  - - Mr
+    - Herr
+
+  - - Mrs
+    - Frau
+
+  - - day
+    - der Tag
+    - das Tag
+    - der Tage
+
+  - - days
+    - die Tage
+    - die Tagen
+    - die Tages
+
+  - - bird
+    - der Vogel
+    - das Vogel
+    - die Vogel
+
+  - - birds
+    - die Vögel
+    - die Vogels
+
+  - - door
+    - die Tür
+
+  - - doors
+    - die Türen
+    - die Türe
+    - die Türes
+
+  - - nest
+    - das Nest
+    - der Nest
+    - die Nest
+
+  - - nests
+    - die Nester
+
+  - - tree
+    - der Baum
+    - die Baum
+
+  - - trees
+    - die Bäume
+
+  - - cat
+    - die Katze
+    - die Katzen
+
+  - - car
+    - das Auto
+    - die Auto
+    - der Auto
+
+  - - cars
+    - die Autos
+    - der Autos
+
+  - - dog
+    - der Hund
+    - die Hunde
+
+  - - flower
+    - die Blume
+    - die Blumen
+
+  - - house
+    - das Haus
+    - die Häuser
+
+  - - roof
+    - das Dach
+    - die Dächer
+
+  - - fence
+    - der Zaun
+    - die Zäune
+
+  - - window
+    - das Fenster
+    - die Fenster
+
+  - - man
+    - der Mann
+    - die Männer
+
+  - - woman
+    - die Frau
+    - die Frauen
+
+  - - child
+    - das Kind
+    - die Kinder
+
+  - - boy
+    - der Junge
+    - die Jungen
+
+  - - girl
+    - das Mädchen
+    - die Mädchen
+
+  - - cage
+    - der Käfig
+    - die Käfige
+
+  - - curtain
+    - der Vorhang
+    - die Vorhänge
+
+  - - chimney
+    - der Schornstein
+    - die Schornsteine
+
+  - - sun
+    - die Sonne
+    - die Sonnen
+
+  - - 1
+    - eins
+    - ein
+    - eine
+
+  - - 11
+    - elf
+
+  - - 2
+    - zwei
+    - drei
+
+  - - 12
+    - zwölf
+
+  - - 3
+    - drei
+    - zwei
+
+  - - 13
+    - dreizehn
+    - dreizig
+
+  - - 4 
+    - vier
+
+  - - 14
+    - vierzehn
+    - vierzig
+
+  - - 5
+    - fünf
+
+  - - 15
+    - fünfzehn
+    - fünfzig
+
+  - - 6
+    - sechs
+
+  - - 16
+    - sechzehn
+    - sechzig
+
+  - - 7
+    - sieben
+
+  - - 17
+    - siebzehn
+    - siebenzehn
+    - siebzig
+    - siebenzig
+
+  - - 8
+    - acht
+
+  - - 18
+    - achtzehn
+    - achtzig
+
+  - - 9
+    - neun
+
+  - - 19
+    - neunzehn
+    - neunzig
+
+  - - 10
+    - zehn
+
+  - - 20
+    - zwanzig
+    - zwanzehn
+
+  - - red
+    - rot
+
+  - - yellow
+    - gelb
+
+  - - blue
+    - blau
+
+  - - green
+    - grün
+    - grun
+
+  - question: brown
+    answers:
+    - braun
+    trivia: pronounce it like the English "brown" not like "braun"
+
+
+  - - black
+    - schwarz
+
+  - - grey
+    - grau
+
+  - - white
+    - weiß
+
+  - - pink
+    - rosarot
+
+  - question: orange
+    answers:
+    - orange
+    trivia: pronounce it like the French do
+
+  - - How would you ask someone their name?
+    - wie heißen Sie?
+
+  - - How would you tell someone your name?
+    - ich heiße...
+
+  - - How would you introduce your friend Anita?
+    - das ist meine Freundin Anita
+    - das ist meine Freund Anita
+    - das ist meine Freunde Anita
+    - das ist mein Freund Anita
+
+  - - How would you tell someone your friend is called Daniel?
+    - das ist mein Freund Daniel
+    - das ist meine Freund Daniel
+    - das ist meine Freunde Daniel
+    - das ist meine Freundin Daniel
+
+  - - I am called
+    - ich heiße
+    - ihr heißt
+
+  - - you are called (i)
+    - du heißt
+
+  - - he is called
+    - er heißt
+
+  - - she is called
+    - sie heißt
+
+  - - it is called
+    - es heißt
+
+  - - we are called
+    - wir heißen
+
+  - - you are called (pl)
+    - ihr heißt
+    - ihr heiße
+
+  - - they are called
+    - Sie heißen
+    - Sie heiße
+
+  - - I am
+    - ich bin
+    - ich ißt
+    - mir ist
+
+  - - you are (i)
+    - du bist
+    - du ist
+
+  - - he is
+    - er ist
+    - es ist
+
+  - - she is
+    - sie ist
+
+  - - it is
+    - es ist
+
+  - - we are
+    - wir sind
+    - wir sein
+
+  - - you are (pl)
+    - ihr seid
+
+  - - they are
+    - Sie sind
+
+  - - I make
+    - ich mache
+
+  - - you make (i)
+    - du machst
+
+  - - he makes
+    - er macht
+
+  - - she makes
+    - sie macht
+
+  - - it makes
+    - es macht
+
+  - - we make
+    - wir machen
+
+  - - you make (pl)
+    - ihr macht
+
+  - - they make
+    - Sie machen
+
+  - - I work
+    - ich arbeite
+
+  - - you work (i)
+    - du arbeitest
+
+  - - he works
+    - er arbeitet
+
+  - - she works
+    - sie arbeitet
+
+  - - it works
+    - es arbeitet
+
+  - - we work
+    - wir arbeiten
+
+  - - you work (plural)
+    - ihr arbeitet
+
+  - - they work
+    - Sie arbeiten
+
+  - - I play
+    - ich spiele
+
+  - - you play (i)
+    - du spielst
+
+  - - he plays
+    - er spielt
+
+  - - she plays
+    - sie spielt
+
+  - - it plays
+    - es spielt
+
+  - - we play
+    - wir spielen
+
+  - - you play (pl)
+    - ihr spielt
+
+  - - they play
+    - Sie spielen
+
+  - - I fly
+    - ich fliege
+
+  - - you fly (i)
+    - du fliegst
+    - du fliegt
+
+  - - he flies
+    - er fliegt
+
+  - - she flies
+    - sie fliegt
+
+  - - it flies
+    - es fliegt
+
+  - - we fly
+    - wir fliegen
+
+  - - you fly (pl)
+    - ihr fliegt
+
+  - - they fly
+    - Sie fliegen
+
+  - - Where do you live?
+    - wo wohnen Sie?
+
+  - - I live in Hythe
+    - Ich wohne in Hythe
+
+  - - where (from)
+    - woher
+
+  - - where do you come from?
+    - woher kommen Sie?
+    - wer kommen Sie?
+    - wo kommen Sie?
+
+  - - I come from...
+    - Ich komme aus...
+
+  - - who
+    - wer
+    - wo
+
+  - - who is this?
+    - wer ist das?
+    - wo ist das?
+
+  - - where
+    - wo
+
+  - - what
+    - was
+
+  - - what is this?
+    - was ist das?
+
+  - - that is...
+    - das ist...
+
+  - - that is my new car
+    - das ist mein neues Auto
+    - das ist mein neue Auto
+
+  - - what is this in English?
+    - wie heißt das auf Englisch?
+
+  - - do you speak German?
+    - sprechen Sie Deutsch?
+
+  - - are there any..?
+    - gibt es..?
+
+  - - is there a..?
+    - gibt es..?
+
+  - - Switzerland
+    - Schweiz
+
+  - - German
+    - Deutsch
+
+  - - French
+    - Französisch
+
+  - - Italian
+    - Italienisch
+
+  - - France
+    - Frankreich
+
+  - - French
+    - Französisch
+
+  - - Greece
+    - Griechenland
+
+  - - Greek
+    - Griechisch
+
+  - - Italy
+    - Italien
+
+  - - Italian
+    - Italienisch
+
+  - - Spain
+    - Spanien
+
+  - - Spanish
+    - Spanisch
+
+  - - I am not so good
+    - mir geht es nicht so gut
+    - ich bin nicht so gut
+
+  - - I have a cold
+    - Ich habe eine Erkältung
+    - mir hat eine Erkältung
+    - ich bin eine Erkältung
+
+  - - cold (achoo)
+    - die Erkältung
+    - die Kalt
+    - der Erkältung
+    - der Kalt
+
+  - - get well soon
+    - gute Besserung
+
+  - - to wish
+    - wünschen
+    - wischen
+
+  - - what are you doing?
+    - was machst du?
+
+  - - where is my book?
+    - wo ist mein Buch?
+
+  - - where to
+    - wohin
+    - woher
+    - wo
+    - wer
+
+  - - where are you going?
+    - wohin gehst du?
+
+  - - where from
+    - woher
+    - wo
+    - wohin
+
+  - - where do you come from?
+    - woher kommst du?
+
+  - - why
+    - warum
+    - wo
+    - wer
+
+  - - why are you so tired?
+    - warum bist du so müde?
+
+  - - when
+    - wann
+
+  - - wann gehst du nach Hause?
+    - when are you going home?
+
+- 'with thanks to Veronika and her German lessons... Key: (i) informal, (f) formal, (pl) informal plural'

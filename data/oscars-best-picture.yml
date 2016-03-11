@@ -1,0 +1,343 @@
+- Best Picture
+
+- - question: 2015
+    answers:
+    - Spotlight
+
+  - question: 2014
+    answers:
+    - Birdman
+
+  - question: 2013
+    answers:
+    - 12 Years a Slave
+
+  - question: 2012
+    answers:
+    - Argo
+
+  - question: 2011
+    answers:
+    - The Artist
+
+  - question: 2010
+    answers:
+    - King's Speech
+
+  - question: 2009
+    answers:
+    - Hurt Locker
+
+  - question: 2008
+    answers:
+    - Slumdog Millionaire
+
+  - question: 2007
+    answers:
+    - No Country for Old Men
+
+  - question: 2007
+    answers:
+    - No Country for Old Men
+
+  - question: 2006
+    answers:
+    - The Departed
+
+  - question: 2005
+    answers:
+    - Crash
+
+  - question: 2004
+    answers:
+    - Million Dollar Baby
+
+  - question: 2003
+    answers:
+    - 'The Lord of the Rings: The Return of the King'
+
+  - question: 2002
+    answers:
+    - Chicago
+
+  - question: 2001
+    answers:
+    - A Beautiful Mind
+
+  - question: 2000
+    answers:
+    - Gladiator
+
+  - question: 1999
+    answers:
+    - American Beauty
+
+  - question: 1998
+    answers:
+    - Shakespeare in Love
+
+  - question: 1997
+    answers:
+    - Titanic
+
+  - question: 1996
+    answers:
+    - The English Patien
+
+  - question: 1995
+    answers:
+    - Braveheart
+
+  - question: 1994
+    answers:
+    - Forrest Gump
+    - Pulp Fiction
+    - Four Weddings and a Funeral
+
+  - question: 1993
+    answers:
+    - Schindler's List
+
+  - question: 1992
+    answers:
+    - Unforgiven
+
+  - question: 1991
+    answers:
+    - The Silence of the Lambs
+    - JFK
+
+  - question: 1990
+    answers:
+    - Dances with Wolves
+    - Ghost
+    - Goodfellas
+    - Godfather III
+
+  - question: 1989
+    answers:
+    - Driving Miss Daisy
+
+  - question: 1988
+    answers:
+    - Rain Man
+
+  - question: 1987
+    answers:
+    - The Last Emperor
+
+  - question: 1986
+    answers:
+    - Platoon
+
+  - question: 1985
+    answers:
+    - Out of Africa
+    - The Color Purple
+
+  - question: 1984
+    answers:
+    - Amadeus
+    - The Killing Fields
+    - A Passage to India
+
+  - question: 1983
+    answers:
+    - Terms of Endearment
+
+  - question: 1982
+    answers:
+    - Ghandi
+
+  - question: 1981
+    answers:
+    - Chariots of fire
+    - Raiders of the Lost Ark
+
+  - question: 1980
+    answers:
+    - Ordinary People
+
+  - question: 1979
+    answers:
+    - Kramer vs Kramer
+
+  - question: 1978
+    answers:
+    - The Deer Hunter
+
+  - question: 1977
+    answers:
+    - Annie Hall
+    - Star Wars
+
+  - question: 1976
+    answers:
+    - Rocky
+    - Taxi Driver
+
+  - question: 1975
+    answers:
+    - One Flew Over the Cuckoo's Nest
+    - Jaws
+
+  - question: 1974
+    answers:
+    - The Godfather Part II
+    - Chinatown
+    - The Towering Inferno
+
+  - question: 1973
+    answers:
+    - The Sting
+    - The Exorcist
+    - American Graffiti
+
+  - question: 1972
+    answers:
+    - The Godfather
+    - Deliverance
+    - Caberet
+
+  - question: 1971
+    answers:
+    - The French Connection
+    - A Clockwork Orange
+
+  - question: 1970
+    answers:
+    - Patton
+    - Love Story
+
+  - question: 1969
+    answers:
+    - Midnight Cowboy
+
+  - question: 1968
+    answers:
+    - Oliver!
+
+  - question: 1967
+    answers:
+    - In the Heat of the Night
+
+  - question: 1966
+    answers:
+    - A Man for All Seasons
+
+  - question: 1965
+    answers:
+    - The Sound of Music
+
+  - question: 1964
+    answers:
+    - My Fair Lady
+
+  - question: 1963
+    answers:
+    - Tom Jones
+
+  - question: 1962
+    answers:
+    - Lawrence of Arabia
+
+  - question: 1961
+    answers:
+    - West Side Story
+
+  - question: 1960
+    answers:
+    - The Apartment
+
+  - question: 1959
+    answers:
+    - Ben Hur
+
+  - question: 1958
+    answers:
+    - Gigi
+
+  - question: 1957
+    answers:
+    - The Bridge on the River Kwai
+
+  - question: 1956
+    answers:
+    - Around the World in 80 Days
+
+  - question: 1955
+    answers:
+    - Marty
+
+  - question: 1954
+    answers:
+    - On the Waterfront
+
+  - question: 1953
+    answers:
+    - From Here to Eternity
+
+  - question: 1952
+    answers:
+    - The Greatest Show on Earth
+
+  - question: 1951
+    answers:
+    - An American in Paris
+
+  - question: 1950
+    answers:
+    - All About Eve
+
+  - question: 1949
+    answers:
+    - All the King's Men
+
+  - question: 1948
+    answers:
+    - Hamlet
+
+  - question: 1947
+    answers:
+    - Gentleman's Agreement
+
+  - question: 1946
+    answers:
+    - The Best Years of Our Lives
+
+  - question: 1945
+    answers:
+    - The Lost Weekend
+
+  - question: 1944
+    answers:
+    - Going My Way
+
+  - question: 1943
+    answers:
+    - Casablanca
+
+  - question: 1942
+    answers:
+    - Mrs Miniver
+
+  - question: 1941
+    answers:
+    - How Green Was My Valley
+    - Citizen Kane
+    - The Maltese Falcon
+
+  - question: 1940
+    answers:
+    - Rebecca
+    - The Great Dictator
+    - The Grapes Of Wrath
+
+  - question: 1939
+    answers:
+    - Gone with the Wind
+    - The Wizard of Oz
+    - Wuthering Heights
+    trivia: Same year as Wizard of Oz...
+
+- Plenty missing right now...
