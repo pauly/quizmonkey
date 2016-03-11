@@ -1,0 +1,459 @@
+- Best Picture
+
+- - q: 2015
+    a:
+    - Spotlight
+
+  - q: 2014
+    a:
+    - Birdman
+
+  - q: 2013
+    a:
+    - 12 Years a Slave
+
+  - q: 2012
+    a:
+    - Argo
+
+  - q: 2011
+    a:
+    - The Artist
+
+  - q: 2010
+    a:
+    - King's Speech
+
+  - q: 2009
+    a:
+    - Hurt Locker
+
+  - q: 2008
+    a:
+    - Slumdog Millionaire
+
+  - q: 2007
+    a:
+    - No Country for Old Men
+
+  - q: 2006
+    a:
+    - The Departed
+
+  - q: 2005
+    a:
+    - Crash
+
+  - q: 2004
+    a:
+    - Million Dollar Baby
+
+  - q: 2003
+    a:
+    - 'The Lord of the Rings: The Return of the King'
+
+  - q: 2002
+    a:
+    - Chicago
+
+  - q: 2001
+    a:
+    - A Beautiful Mind
+
+  - q: 2000
+    a:
+    - Gladiator
+
+  - q: 1999
+    a:
+    - American Beauty
+    tags:
+    - 90s
+
+  - q: 1998
+    a:
+    - Shakespeare in Love
+    tags:
+    - 90s
+
+  - q: 1997
+    a:
+    - Titanic
+    tags:
+    - 90s
+
+  - q: 1996
+    a:
+    - The English Patien
+    tags:
+    - 90s
+
+  - q: 1995
+    a:
+    - Braveheart
+    tags:
+    - 90s
+
+  - q: 1994
+    a:
+    - Forrest Gump
+    - Pulp Fiction
+    - Four Weddings and a Funeral
+    tags:
+    - 90s
+
+  - q: 1993
+    a:
+    - Schindler's List
+    tags:
+    - 90s
+
+  - q: 1992
+    a:
+    - Unforgiven
+    tags:
+    - 90s
+
+  - q: 1991
+    a:
+    - The Silence of the Lambs
+    - JFK
+    tags:
+    - 90s
+
+  - q: 1990
+    a:
+    - Dances with Wolves
+    - Ghost
+    - Goodfellas
+    - Godfather III
+    tags:
+    - 90s
+
+  - q: 1989
+    a:
+    - Driving Miss Daisy
+    tags:
+    - 80s
+
+  - q: 1988
+    a:
+    - Rain Man
+    tags:
+    - 80s
+
+  - q: 1987
+    a:
+    - The Last Emperor
+    tags:
+    - 80s
+
+  - q: 1986
+    a:
+    - Platoon
+    tags:
+    - 80s
+
+  - q: 1985
+    a:
+    - Out of Africa
+    - The Color Purple
+    tags:
+    - 80s
+
+  - q: 1984
+    a:
+    - Amadeus
+    - The Killing Fields
+    - A Passage to India
+    tags:
+    - 80s
+
+  - q: 1983
+    a:
+    - Terms of Endearment
+    tags:
+    - 80s
+
+  - q: 1982
+    a:
+    - Ghandi
+    tags:
+    - 80s
+
+  - q: 1981
+    a:
+    - Chariots of fire
+    - Raiders of the Lost Ark
+    tags:
+    - 80s
+
+  - q: 1980
+    a:
+    - Ordinary People
+    tags:
+    - 80s
+
+  - q: 1979
+    a:
+    - Kramer vs Kramer
+    tags:
+    - 70s
+
+  - q: 1978
+    a:
+    - The Deer Hunter
+    tags:
+    - 70s
+
+  - q: 1977
+    a:
+    - Annie Hall
+    - Star Wars
+    tags:
+    - 70s
+
+  - q: 1976
+    a:
+    - Rocky
+    - Taxi Driver
+    tags:
+    - 70s
+
+  - q: 1975
+    a:
+    - One Flew Over the Cuckoo's Nest
+    - Jaws
+    tags:
+    - 70s
+
+  - q: 1974
+    a:
+    - The Godfather Part II
+    - Chinatown
+    - The Towering Inferno
+    tags:
+    - 70s
+
+  - q: 1973
+    a:
+    - The Sting
+    - The Exorcist
+    - American Graffiti
+    tags:
+    - 70s
+
+  - q: 1972
+    a:
+    - The Godfather
+    - Deliverance
+    - Caberet
+    tags:
+    - 70s
+
+  - q: 1971
+    a:
+    - The French Connection
+    - A Clockwork Orange
+    tags:
+    - 70s
+
+  - q: 1970
+    a:
+    - Patton
+    - Love Story
+    tags:
+    - 70s
+
+  - q: 1969
+    a:
+    - Midnight Cowboy
+    tags:
+    - 60s
+
+  - q: 1968
+    a:
+    - Oliver!
+    tags:
+    - 60s
+
+  - q: 1967
+    a:
+    - In the Heat of the Night
+    tags:
+    - 60s
+
+  - q: 1966
+    a:
+    - A Man for All Seasons
+    tags:
+    - 60s
+
+  - q: 1965
+    a:
+    - The Sound of Music
+    tags:
+    - 60s
+
+  - q: 1964
+    a:
+    - My Fair Lady
+    tags:
+    - 60s
+
+  - q: 1963
+    a:
+    - Tom Jones
+    tags:
+    - 60s
+
+  - q: 1962
+    a:
+    - Lawrence of Arabia
+    tags:
+    - 60s
+
+  - q: 1961
+    a:
+    - West Side Story
+    tags:
+    - 60s
+
+  - q: 1960
+    a:
+    - The Apartment
+    tags:
+    - 60s
+
+  - q: 1959
+    a:
+    - Ben Hur
+    tags:
+    - 50s
+
+  - q: 1958
+    a:
+    - Gigi
+    tags:
+    - 50s
+
+  - q: 1957
+    a:
+    - The Bridge on the River Kwai
+    tags:
+    - 50s
+
+  - q: 1956
+    a:
+    - Around the World in 80 Days
+    tags:
+    - 50s
+
+  - q: 1955
+    a:
+    - Marty
+    tags:
+    - 50s
+
+  - q: 1954
+    a:
+    - On the Waterfront
+    tags:
+    - 50s
+
+  - q: 1953
+    a:
+    - From Here to Eternity
+    tags:
+    - 50s
+
+  - q: 1952
+    a:
+    - The Greatest Show on Earth
+    tags:
+    - 50s
+
+  - q: 1951
+    a:
+    - An American in Paris
+    tags:
+    - 50s
+
+  - q: 1950
+    a:
+    - All About Eve
+    tags:
+    - 50s
+
+  - q: 1949
+    a:
+    - All the King's Men
+    tags:
+    - 40s
+
+  - q: 1948
+    a:
+    - Hamlet
+    tags:
+    - 40s
+
+  - q: 1947
+    a:
+    - Gentleman's Agreement
+    tags:
+    - 40s
+
+  - q: 1946
+    a:
+    - The Best Years of Our Lives
+    tags:
+    - 40s
+
+  - q: 1945
+    a:
+    - The Lost Weekend
+    tags:
+    - 40s
+
+  - q: 1944
+    a:
+    - Going My Way
+    tags:
+    - 40s
+
+  - q: 1943
+    a:
+    - Casablanca
+    tags:
+    - 40s
+
+  - q: 1942
+    a:
+    - Mrs Miniver
+    tags:
+    - 40s
+
+  - q: 1941
+    a:
+    - How Green Was My Valley
+    - Citizen Kane
+    - The Maltese Falcon
+    tags:
+    - 40s
+
+  - q: 1940
+    a:
+    - Rebecca
+    - The Great Dictator
+    - The Grapes Of Wrath
+    tags:
+    - 40s
+
+  - q: 1939
+    a:
+    - Gone with the Wind
+    - The Wizard of Oz
+    - Wuthering Heights
+    trivia: Same year as Wizard of Oz...
+
+- Plenty missing right now...

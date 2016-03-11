@@ -1,0 +1,662 @@
+- Italian vocab
+
+# Format:
+# 
+# - question: what is 2 + 2?
+#     answers:
+#     - 4 (correct goes first)
+#     - 5 (optional misleading answers follow)
+#     - 22
+#     trivia: fact to help remember the answer goes here
+#     tags:
+#     - maths
+#     - tags are optional
+#
+# Optionally use q: and a: in place of questions: and a: to save space
+#
+# - q: what is 2 + 2?
+#     a:
+#     - 4
+#     - 5
+#     - 22
+
+- - q: I watch the TV
+    a:
+    - (io) guardo la televisione
+    tags:
+    - verbs
+
+  - q: you watch
+    a:
+    - tu guardi la televisione
+    tags:
+    - verbs
+
+  - q: he watches the TV
+    a:
+    - lui guarda la televisione
+    tags:
+    - verbs
+
+  - q: he watches the TV
+    a:
+    - lui guarda la televisione
+    tags:
+    - verbs
+
+  - q: she watches the TV
+    a:
+    - lei guarda la televisione
+    tags:
+    - verbs
+
+  - q: we watch the TV
+    a:
+    - (noi) guardiamo
+    tags:
+    - verbs
+
+  - q: you watch (pl) the TV
+    a:
+    - voi guardate la televisione
+    tags:
+    - verbs
+
+  - q: they watch the TV
+    a:
+    - loro guardano la televisione
+    tags:
+    - verbs
+
+  - q: Hi!
+    a:
+    - Ciao!
+
+  - q: Good morning!
+    a:
+    - Buongiorno!
+
+  - q: Good evening!
+    a:
+    - Buona sera!
+
+  - q: Welcome! (to greet someone)
+    a:
+    - Benvenuto!
+    t:  Benvenuta! (female)
+
+  - q: How are you?
+    a:
+    - Come stai?
+    t:  Come state (polite)?
+
+  - q: I'm fine, thanks!
+    a:
+    - Bene, grazie!
+
+  - q: And you?
+    a:
+    - e tu?
+    t: e lei? (polite)
+
+  - q: Good
+    a:
+    - Bene
+
+  - q: So-So
+    a:
+    - così e così
+
+  - q: Thank you
+    a:
+    - Grazie!
+
+  - q: Thank you very much!
+    a:
+    - Molte grazie!
+
+  - q: You're welcome! (for "thank you")
+    a:
+    - Prego!
+
+  - q: Hey!
+    a:
+    - Ciao!
+
+  - q: Friend!
+    a:
+    - Amico!
+
+  - q: I missed you so much!
+    a:
+    - Mi sei mancato molto!
+
+  - q: What's new? 
+    a:
+    - Cosa c&#39;&egrave; di nuovo?
+
+  - q: Nothing much
+    a:
+    - Non molto
+
+  - q: Good night!
+    a:
+    - Buona notte!
+
+  - q: See you later!
+    a:
+    - A dopo
+
+  - q: Good bye!
+    a:
+    - Arrivederci!
+
+  - q: I'm lost
+    a:
+    - Mi sono perso
+    t:  persa (feminine)
+
+  - q: Can I help you?
+    a:
+    - Posso aiutarti?
+    t:  posso aiutarla (polite)?
+
+  - q: Can you help me?
+    a:
+    - Potresti aiutarmi?
+    t:  potrebbe aiutarmi? (polite)
+
+  - q: Where is the bathroom?
+    a:
+    - Dove posso trovare il bagno?
+
+  - q: Where is the pharmacy?
+    a:
+    - Dove posso trovare la farmacia?
+
+  - q: Go straight, then turn left
+    a:
+    - Vada dritto, e poi giri a sinistra
+
+  - q: Go straight, then turn right
+    a:
+    - Vada dritto, e poi giri a destra
+
+  - q: I'm looking for John
+    a:
+    - Sto cercando John
+
+  - q: One moment please!
+    a:
+    - Un momento prego!
+
+  - q: Hold on please! (phone)
+    a:
+    - Attenda prego!
+
+  - q: How much is this?
+    a:
+    - Quanto costa questo?
+
+  - q: Excuse me... (to ask for something)
+    a:
+    - Mi scusi...
+
+  - q: Excuse me! (to pass by)
+    a:
+    - Permesso
+
+  - q: Come with me!
+    a:
+    - Vieni con me!
+    t:  Venga con me! (polite)
+
+  - q: Do you speak English
+    a:
+    - Parla inglese?
+    t: Parli ...? (informal)
+
+  - q: Do you speak Italian?
+    a:
+    - Parla italiano?
+    t: Parli ...? (informal)
+
+  - q: Just a little
+    a:
+    - Solo un po'
+
+  - q: What's your name?
+    a:
+    - Quale è il suo nome?
+
+  - q: My name is ...
+    a:
+    - Mi chiamo ...
+
+  - q: Mr
+    a:
+    - Signor
+
+  - q: Mrs
+    a:
+    - Signora
+
+  - q: Miss
+    a:
+    - Signorina
+
+  - q: Nice to meet you!
+    a:
+    - è un piacere conoscerla
+
+  - q: You're very kind!
+    a:
+    - lei è molto gentile
+
+  - q: Where are you from?
+    a:
+    - Di dove è?
+
+  - q: I'm from the USA
+    a:
+    - Sono statunitense
+
+  - q: I'm from Italy
+    a:
+    - Sono italiano
+
+  - q: I'm American
+    a:
+    - Sono americano
+
+  - q: Where do you live?
+    a:
+    - Dove vive?
+
+  - q: I live in the USA
+    a:
+    - Vivo negli stati uniti
+
+  - q: I live in Italy
+    a:
+    - Vivo in Italia
+
+  - q: Did you like it here?
+    a:
+    - ti piace qui?
+
+  - q: Italy is a wonderful country
+    a:
+    - L'italia è un paese meraviglioso
+
+  - q: What do you do for a living?
+    a:
+    - cosa fai per vivere?
+
+  - q: I work as a translator
+    a:
+    - Lavoro come traduttore
+
+  - q: I work as a businessman
+    a:
+    - Lavoro come uomo d'affari
+
+  - q: I like Italian
+    a:
+    - Mi piace l'italiano
+
+  - q: I've been learning Italian for 1 month
+    a:
+    - Sto imparando l'italiano da un mese
+
+  - q: Oh! That's good!
+    a:
+    - Grande!
+
+  - q: How old are you?
+    a:
+    - Quanti anni hai?
+
+  - q: I'm twenty years old
+    a:
+    - Ho venti anni
+
+  - q: I'm thirty years old
+    a:
+    - Ho trenta anni
+
+  - q: I have to go
+    a:
+    - Devo andare
+
+  - q: I will be right back!
+    a:
+    - Torno subito!
+
+  - q: Good luck!
+    a:
+    - Buona fortuna!
+
+  - q: Happy birthday!
+    a:
+    - Buon compleanno!
+
+  - q: Happy new year!
+    a:
+    - Felice anno nuovo!
+
+  - q: Merry Christmas!
+    a:
+    - Buon natale!
+
+  - q: Congratulations!
+    a:
+    - Congratulazioni!
+
+  - q: Enjoy! (for meals...)
+    a:
+    - Buon appetito!
+
+  - q: I'd like to visit Italy one day
+    a:
+    - Mi piacerebbe visitare l'Italia un giorno di questi!
+
+  - q: Say hi to John for me
+    a:
+    - Saluta John da parte mia!
+
+  - q: Bless you (when sneezing)
+    a:
+    - Salute!
+
+  - q: Good night and sweet dreams!
+    a:
+    - Buona notte e sogni d'oro!
+
+  - q: I'm Sorry! (if you don't hear something)
+    a:
+    - Mi scusi?
+
+  - q: Sorry (for a mistake)
+    a:
+    - Scusami!
+    t: Mi scusi!
+
+  - q: No Problem!
+    a:
+    - Non c'è problema!
+
+  - q: Can You Say It Again?
+    a:
+    - Potrebbe ripetere per favore?
+
+  - q: Can You Speak Slowly?
+    a:
+    - Potrebbe parlare lentamente?
+
+  - q: Write It Down Please!
+    a:
+    - Lo scriva per favore
+
+  - q: I Don't Understand!
+    a:
+    - Non capisco!
+
+  - q: I Don't Know!
+    a:
+    - Non lo so!
+
+  - q: I Have No Idea
+    a:
+    - Non ne ho idea!
+
+  - q: What's That Called In Italian?
+    a:
+    - Come si chiama quella cosa in italiano?
+
+  - q: What Does "gatto" Mean In English?
+    a:
+    - Cosa significa "gatto" in inglese?
+
+  - q: How Do You Say "Please" In Italian?
+    a:
+    - Come dite “please” in italiano?
+
+  - q: What Is This?
+    a:
+    - Cos'è questa cosa?
+
+  - q: My Italian is bad
+    a:
+    - il mio italiano è orribile
+
+  - q: I need to practice my Italian
+    a:
+    - ho bisogno di fare pratica con il mio italiano
+
+  - q: Don't worry!
+    a:
+    - non ti preoccupare !
+
+  - q: Good
+    a:
+    - Buono
+
+  - q: Bad
+    a:
+    - Cattivo
+
+  - q: So-So
+    a:
+    - Cos&igrave; e cos&igrave;
+
+  - q: Big
+    a:
+    - Grande
+
+  - q: Small
+    a:
+    - Piccolo
+
+  - q: Today
+    a:
+    - Oggi
+
+  - q: Now
+    a:
+    - Adesso
+
+  - q: Tomorrow
+    a:
+    - Domani
+
+  - q: Yesterday
+    a:
+    - ieri
+
+  - q: Yes
+    a:
+    - Si
+
+  - q: No
+    a:
+    - No
+
+  - q: Here you go! (when giving something)
+    a:
+    - Eccolo!
+
+  - q: Do you like it?
+    a:
+    - Ti piace?
+
+  - q: I really like it!
+    a:
+    - Mi piace davvero
+
+  - q: I'm hungry
+    a:
+    - Sono Affamato
+
+  - q: I'm thirsty
+    a:
+    - Sono Assetato
+
+  - q: In The Morning
+    a:
+    - Di mattina
+
+  - q: In Evening
+    a:
+    - Di sera
+
+  - q: At Night
+    a:
+    - Di notte
+
+  - q: this morning
+    a:
+    - t: Stamattina
+
+  - q: this evening
+    a:
+    - Stasera
+
+  - q: This/ That. Here/There
+    a:
+    - Questo/ Quello. Qui/ Li
+
+  - q: me
+    a:
+    - io
+
+  - q: you (i)
+    a:
+    - tu
+
+  - q: you
+    a:
+    - voi
+
+  - q: him
+    a:
+    - lui
+
+  - q: her
+    a:
+    - lei
+
+  - q: Really!
+    a:
+    - Davvero!
+
+  - q: Look!
+    a:
+    - Guarda!
+
+  - q: Hurry up!
+    a:
+    - Sbrigati!
+
+  - q: What? Where?
+    a:
+    - Cosa? Dove?
+
+  - q: What time is it?
+    a:
+    - Che ore sono?
+
+  - q: it's 10 o'clock
+    a:
+    - sono le dieci in punto
+
+  - q: it's 07:30pm
+    a:
+    - sono le sette e trenta
+
+  - q: it's 10:30pm
+    a:
+    - sono le dieci e trenta
+
+  - q: it's 7 o'clock
+    a:
+    - sono le sette in punto
+
+  - q: Give me this!
+    a:
+    - Dammi questo!
+
+  - q: I love you!
+    a:
+    - Ti amo!
+    t: Ti voglio bene!
+
+  - q: I feel sick
+    a:
+    - Mi sento male!
+
+  - q: I need a doctor
+    a:
+    - Ho bisogno di un dottore
+
+  - q: one
+    a:
+    - uno
+    tags:
+    - numbers
+
+  - q: two
+    a:
+    - due
+    tags:
+    - numbers
+
+  - q: three
+    a:
+    - tre
+    tags:
+    - numbers
+
+  - q: four
+    a:
+    - quattro
+    tags:
+    - numbers
+
+  - q: five
+    a:
+    - cinque
+    tags:
+    - numbers
+
+  - q: six
+    a:
+    - sei
+    tags:
+    - numbers
+
+  - q: seven
+    a:
+    - sette
+    tags:
+    - numbers
+
+  - q: eight
+    a:
+    - otto
+    tags:
+    - numbers
+
+  - q: nine
+    a:
+    - nove
+    tags:
+    - numbers
+
+  - q: ten
+    a:
+    - dieci
+    tags:
+    - numbers
+
+- "A work in progress... Key: (i) informal, (f) formal, (pl) informal plural"

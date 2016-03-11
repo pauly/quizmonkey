@@ -1,0 +1,2 @@
+--recursive
+--compilers .:babel-register

@@ -1,0 +1,380 @@
+- Best actor
+
+- 
+  - q: 2015
+    a:
+    - Leonardo DiCaprio
+    trivia: The Revenant
+
+  - q: 2014
+    a:
+    - Eddie Redmayne
+    trivia: The Theory of Everything
+
+  - q: 2013
+    a:
+    - Matthew McConaughey
+    trivia: Dallas Buyers Club
+
+  - q: 2012
+    a:
+    - Daniel Day-Lewis
+    trivia: Lincoln
+
+  - q: 2011
+    a:
+    - Jean Dujardin
+    trivia: The Artist
+
+  - q: 2010
+    a:
+    - Colin Firth
+    - Colin Farrell
+    trivia: The King's Speech
+
+  - q: 2009
+    a:
+    - Jeff Bridges
+    trivia: Crazy Heart
+
+  - q: 2008
+    a:
+    - Sean Penn
+    - Sean Bean
+    trivia: Milk
+
+  - q: 2007
+    a:
+    - Daniel Day-Lewis
+    trivia: There Will Be Blood
+
+  - q: 2006
+    a:
+    - Forest Whitaker
+    trivia: The Last King of Scotland
+
+  - q: 2005
+    a:
+    - Philip Seymour Hoffman
+    trivia: Capote
+
+  - q: 2004
+    a:
+    - Jamie Foxx
+    trivia: Ray
+
+  - q: 2003
+    a:
+    - Sean Penn
+    trivia: Mystic River
+
+  - q: 2002
+    a:
+    - Adrien Brody
+    trivia: The Pianist
+
+  - q: 2001
+    a:
+    - Denzel Washington
+    trivia: Training Day
+
+  - q: 2000
+    a:
+    - Russell Crowe
+    trivia: Gladiator, also won best picture
+
+  - q: 1999
+    a:
+    - Russell Crowe
+    trivia: Gladiator, also won best picture
+    tags:
+    - 90s
+
+  - q: 1998
+    a:
+    - Roberto Benigni
+    trivia: Life is Beautiful
+    tags:
+    - 90s
+
+  - q: 1997
+    a:
+    - Jack Nicholson
+    trivia: As Good as It Gets
+    tags:
+    - 90s
+
+  - q: 1996
+    a:
+    - Geoffrey Rush
+    trivia: Shine
+    tags:
+    - 90s
+
+  - q: 1995
+    a:
+    - Nicoals Cage
+    trivia: Leaving Las Vegas
+    tags:
+    - 90s
+
+  - q: 1994
+    a:
+    - Tom Hanks
+    trivia: Forrest Gump, also won best picture
+    tags:
+    - 90s
+
+  - q: 1993
+    a:
+    - Tom Hanks
+    trivia: Philadelphia
+    tags:
+    - 90s
+
+  - q: 1992
+    a:
+    - Al Pacino
+    trivia: Scent of a Woman
+    tags:
+    - 90s
+
+  - q: 1991
+    a:
+    - Anthony Hopkins
+    trivia: The Silence of the Lambs
+    tags:
+    - 90s
+
+  - q: 1990
+    a:
+    - Jeremy Irons
+    trivia: Reversal of Fortune
+    tags:
+    - 90s
+
+  - q: 1989
+    a:
+    - Daniel Day-Lewis
+    trivia: My Left Foot
+    tags:
+    - 80s
+
+  - q: 1988
+    a:
+    - Dustin Hoffman
+    - Tom Hanks
+    trivia: Rain Man
+    tags:
+    - 80s
+
+  - q: 1987
+    a:
+    - Michael Douglas
+    - Robin Williams
+    trivia: Wall Street
+    tags:
+    - 80s
+
+  - q: 1986
+    a:
+    - Paul Newman
+    trivia: The Colour of Money
+    tags:
+    - 80s
+
+  - q: 1985
+    a:
+    - William Hurt
+    trivia: Kiss of the Spider Woman
+    tags:
+    - 80s
+
+  - q: 1984
+    a:
+    - F Murray Abraham
+    - Tom Hulce
+    trivia: Amadeus, also best picture
+    tags:
+    - 80s
+
+  - q: 1983
+    a:
+    - Robert Duvall
+    trivia: Tender Mercies
+    tags:
+    - 80s
+
+  - q: 1982
+    a:
+    - Ben Kingsley
+    - Dustin Hoffman
+    trivia: Gandhi, also best picture
+    tags:
+    - 80s
+
+  - q: 1981
+    a:
+    - Henry Fonda
+    - Dudley Moore
+    trivia: On Golden Pond
+    tags:
+    - 80s
+
+  - q: 1980
+    a:
+    - Robert De Niro
+    - John Hurt
+    trivia: Raging Bull
+    tags:
+    - 80s
+
+  - q: 1979
+    a:
+    - Dustin Hoffman
+    trivia: Kramer vs Kramer
+    tags:
+    - 70s
+
+  - q: 1978
+    a:
+    - Jon Voight
+    trivia: Coming Home
+    tags:
+    - 70s
+
+  - q: 1977
+    a:
+    - Richard Dreyfuss
+    trivia: The Goodbye Girl
+    tags:
+    - 70s
+
+  - q: 1976
+    a:
+    - Peter Finch
+    trivia: Network (posthumous)
+    tags:
+    - 70s
+
+  - q: 1975
+    a:
+    - Jack Nicholson
+    trivia: One Flew Over the Cuckoo's Nest
+    tags:
+    - 70s
+
+  - q: 1974
+    a:
+    - Art Carney
+    - Dustin Hoffman
+    - Jack Nicholson
+    - Al Pacino
+    trivia: Harry and Tonto
+    tags:
+    - 70s
+
+  - q: 1973
+    a:
+    - Jack Lemon
+    - Marlon Brando
+    trivia: Save the Tiger
+    tags:
+    - 70s
+
+  - q: 1972
+    a:
+    - Marlon Brando
+    trivia: Brando refused his award for The Godfather 
+    tags:
+    - 70s
+
+  - q: 1971
+    a:
+    - Gene Hackman
+    trivia: The French Connection
+    tags:
+    - 70s
+
+  - q: 1970
+    a:
+    - George C Scott
+    trivia: Refused his award for Patton
+    tags:
+    - 70s
+
+  - q: 1969
+    a:
+    - John Wayne
+    - Dustin Hoffman
+    trivia: True Grit
+    tags:
+    - 60s
+
+  - q: 1968
+    a:
+    - Cliff Robertson
+    trivia: Charly
+    tags:
+    - 60s
+
+  - q: 1967
+    a:
+    - Rod Steiger
+    - Dustin Hoffman
+    - Paul Newman
+    - Warren Beaty
+    trivia: In the Heat of the Night
+    tags:
+    - 60s
+
+  - q: 1966
+    a:
+    - Paul Scofield
+    trivia: A Man for All Seasons
+    tags:
+    - 60s
+
+  - q: 1965
+    a:
+    - Lee Marvin
+    trivia: Cat Ballou
+    tags:
+    - 60s
+
+  - q: 1964
+    a:
+    - Rex Harrison
+    trivia: My Fair Lady
+    tags:
+    - 60s
+
+  - q: 1963
+    a:
+    - Sidney Poitier
+    trivia: Lilies of the Field
+    tags:
+    - 60s
+
+  - q: 1962
+    a:
+    - Gregory Peck
+    trivia: To Kill a Mockingbird
+    tags:
+    - 60s
+
+  - q: 1961
+    a:
+    - Maximillian Schell
+    trivia: Judgment at Nuremburg
+    tags:
+    - 60s
+
+  - q: 1960
+    a:
+    - Burt Lancaster
+    trivia: Elmer Gantry
+    tags:
+    - 60s
+
+- Only holding data at the moment, more to be added...

@@ -1,0 +1,1312 @@
+- German vocab
+
+# Format:
+# 
+# - question: what is 2 + 2?
+#     answers:
+#     - 4 (correct goes first)
+#     - 5 (optional misleading answers follow)
+#     - 22
+#     trivia: fact to help remember the answer goes here
+#     tags:
+#     - maths
+#     - tags are optional
+#
+# Optionally use q: and a: in place of questions: and a: to save space
+#
+# - q: what is 2 + 2?
+#     a:
+#     - 4
+#     - 5
+#     - 22
+
+- - q: cat
+    a:
+    - die Katze
+    - die Katz
+    - der Katze
+    - der Katz
+
+  - q: cats
+    a:
+    - die Katzen
+    - die Katze
+
+  - q: I am hot
+    a:
+    - mir ist heiß
+    - es ist heiß
+    - ich bin heiß
+
+  - q: I eat
+    a:
+    - ich esse
+    - ich ißt
+
+  - q: you eat (i)
+    a:
+    - du ißt
+
+  - q: he eats
+    a:
+    - er ißt
+
+  - q: we eat
+    a:
+    - wir essen
+
+  - q: you eat (pl)
+    a:
+    - ihr eßt
+
+  - q: they eat
+    a:
+    - sie essen
+
+  - q: you eat (f)
+    a:
+    - Sie essen
+
+  - q: I speak
+    a:
+    - ich spreche
+
+  - q: you speak (i)
+    a:
+    - du sprichst
+
+  - q: he speaks
+    a:
+    - er spricht
+
+  - q: she speaks
+    a:
+    - sie spricht
+
+  - q: it speaks
+    a:
+    - es spricht
+
+  - q: we speak
+    a:
+    - wir sprechen
+
+  - q: you speak (pl)
+    a:
+    - ihr sprecht
+
+  - q: you speak (f)
+    a:
+    - Sie sprechen
+
+  - q: I come
+    a:
+    - ich komme
+
+  - q: you come (i)
+    a:
+    - du kommst
+
+  - q: he comes
+    a:
+    - er kommt
+
+  - q: she comes
+    a:
+    - sie kommt
+
+  - q: it comes
+    a:
+    - es kommt
+
+  - q: we come
+    a:
+    - wir kommen
+
+  - q: you come (pl)
+    a:
+    - ihr kommt
+
+  - q: they come
+    a:
+    - Sie kommen
+
+  - q: dog
+    a:
+    - der Hund
+    - das Hund
+    - die Hund
+
+  - q: dogs
+    a:
+    - die Hunde
+    - die Hunden
+
+  - q: door
+    a:
+    - die Tür
+    - die Tur
+    - die Ture
+
+  - q: doors
+    a:
+    - die Türen
+    - die Turen
+    - die Tures
+
+  - q: greeting
+    a:
+    - die Begrüßung
+
+  - q: dismissal / farewell
+    a:
+    - die Verabschiedung
+
+  - q: title
+    a:
+    - die Anrede
+
+  - q: Good morning!
+    a:
+    - Guten Morgen!
+
+  - q: a greeting which can be used during the day
+    a:
+    - Guten Tag!
+
+  - q: Good evening!
+    a:
+    - Guten Abend
+
+  - q: Hello!
+    a:
+    - Hallo!
+
+  - q: Bye!
+    a:
+    - tschüß!
+
+  - q: See you later!
+    a:
+    - Bis später!
+
+  - q: How are you? (i)
+    a:
+    - Wie geht es Dir?
+
+  - q: How are you? (f)
+    a:
+    - Wie geht es Ihnen?
+
+  - q: 'an appropriate reply to "Wie geht es Ihnen?"'
+    a:
+    - Mir geht es gut, danke
+
+  - q: Merry Christmas!
+    a:
+    - Frohe Weihnachten!
+
+  - q: Happy New Year!
+    a:
+    - Gutes Neues Jahr!
+
+  - q: please
+    a:
+    - bitte
+
+  - q: thank you
+    a:
+    - danke
+
+  - q: Here you are
+    a:
+    - Bitte schön
+
+  - q: You are welcome
+    a:
+    - Gern geschehen
+
+  - q: Mr
+    a:
+    - Herr
+
+  - q: Mrs
+    a:
+    - Frau
+
+  - q: day
+    a:
+    - der Tag
+    - das Tag
+    - der Tage
+
+  - q: days
+    a:
+    - die Tage
+    - die Tagen
+    - die Tages
+
+  - q: bird
+    a:
+    - der Vogel
+    - das Vogel
+    - die Vogel
+
+  - q: birds
+    a:
+    - die Vögel
+    - die Vogels
+
+  - q: door
+    a:
+    - die Tür
+
+  - q: doors
+    a:
+    - die Türen
+    - die Türe
+    - die Türes
+
+  - q: nest
+    a:
+    - das Nest
+    - der Nest
+    - die Nest
+
+  - q: nests
+    a:
+    - die Nester
+
+  - q: tree
+    a:
+    - der Baum
+    - die Baum
+
+  - q: trees
+    a:
+    - die Bäume
+
+  - q: cat
+    a:
+    - die Katze
+    - die Katzen
+
+  - q: car
+    a:
+    - das Auto
+    - die Auto
+    - der Auto
+
+  - q: cars
+    a:
+    - die Autos
+    - der Autos
+
+  - q: dog
+    a:
+    - der Hund
+    - die Hunde
+
+  - q: flower
+    a:
+    - die Blume
+    - die Blumen
+
+  - q: house
+    a:
+    - das Haus
+    - die Häuser
+
+  - q: roof
+    a:
+    - das Dach
+    - die Dächer
+
+  - q: fence
+    a:
+    - der Zaun
+    - die Zäune
+
+  - q: window
+    a:
+    - das Fenster
+    - die Fenster
+
+  - q: man
+    a:
+    - der Mann
+    - die Männer
+
+  - q: woman
+    a:
+    - die Frau
+    - die Frauen
+
+  - q: child
+    a:
+    - das Kind
+    - die Kinder
+
+  - q: boy
+    a:
+    - der Junge
+    - die Jungen
+
+  - q: girl
+    a:
+    - das Mädchen
+    - die Mädchen
+
+  - q: cage
+    a:
+    - der Käfig
+    - die Käfige
+
+  - q: curtain
+    a:
+    - der Vorhang
+    - die Vorhänge
+
+  - q: chimney
+    a:
+    - der Schornstein
+    - die Schornsteine
+
+  - q: sun
+    a:
+    - die Sonne
+    - die Sonnen
+
+  - q: 1
+    a:
+    - eins
+    - ein
+    - eine
+    tags:
+    - numbers
+
+  - q: 11
+    a:
+    - elf
+    tags:
+    - numbers
+
+  - q: 2
+    a:
+    - zwei
+    - drei
+    tags:
+    - numbers
+
+  - q: 12
+    a:
+    - zwölf
+    tags:
+    - numbers
+
+  - q: 3
+    a:
+    - drei
+    - zwei
+    tags:
+    - numbers
+
+  - q: 13
+    a:
+    - dreizehn
+    - dreizig
+    tags:
+    - numbers
+
+  - q: 4 
+    a:
+    - vier
+    tags:
+    - numbers
+
+  - q: 14
+    a:
+    - vierzehn
+    - vierzig
+    tags:
+    - numbers
+
+  - q: 5
+    a:
+    - fünf
+    tags:
+    - numbers
+
+  - q: 15
+    a:
+    - fünfzehn
+    - fünfzig
+    tags:
+    - numbers
+
+  - q: 6
+    a:
+    - sechs
+    tags:
+    - numbers
+
+  - q: 16
+    a:
+    - sechzehn
+    - sechzig
+    tags:
+    - numbers
+
+  - q: 7
+    a:
+    - sieben
+    tags:
+    - numbers
+
+  - q: 17
+    a:
+    - siebzehn
+    - siebenzehn
+    - siebzig
+    - siebenzig
+    tags:
+    - numbers
+
+  - q: 8
+    a:
+    - acht
+    tags:
+    - numbers
+
+  - q: 18
+    a:
+    - achtzehn
+    - achtzig
+    tags:
+    - numbers
+
+  - q: 9
+    a:
+    - neun
+    tags:
+    - numbers
+
+  - q: 19
+    a:
+    - neunzehn
+    - neunzig
+    tags:
+    - numbers
+
+  - q: 10
+    a:
+    - zehn
+    tags:
+    - numbers
+
+  - q: 20
+    a:
+    - zwanzig
+    - zwanzehn
+    tags:
+    - numbers
+
+  - q: red
+    a:
+    - rot
+    tags:
+    - colours
+
+  - q: yellow
+    a:
+    - gelb
+
+  - q: blue
+    a:
+    - blau
+    tags:
+    - colours
+
+  - q: green
+    a:
+    - grün
+    - grun
+    tags:
+    - colours
+
+  - q: brown
+    a:
+    - braun
+    trivia: pronounce it like the English "brown" not like "braun"
+    tags:
+    - colours
+
+
+  - q: black
+    a:
+    - schwarz
+    tags:
+    - colours
+
+  - q: grey
+    a:
+    - grau
+    tags:
+    - colours
+
+  - q: white
+    a:
+    - weiß
+    tags:
+    - colours
+
+  - q: pink
+    a:
+    - rosarot
+    tags:
+    - colours
+
+  - q: orange
+    a:
+    - orange
+    trivia: pronounce it like the French do
+    tags:
+    - colours
+
+  - q: How would you ask someone their name?
+    a:
+    - wie heißen Sie?
+    tags:
+    - questions
+
+  - q: How would you tell someone your name?
+    a:
+    - ich heiße...
+
+  - q: How would you introduce your friend Anita?
+    a:
+    - das ist meine Freundin Anita
+    - das ist meine Freund Anita
+    - das ist meine Freunde Anita
+    - das ist mein Freund Anita
+
+  - q: How would you tell someone your friend is called Daniel?
+    a:
+    - das ist mein Freund Daniel
+    - das ist meine Freund Daniel
+    - das ist meine Freunde Daniel
+    - das ist meine Freundin Daniel
+
+  - q: I am called
+    a:
+    - ich heiße
+    - ihr heißt
+
+  - q: you are called (i)
+    a:
+    - du heißt
+
+  - q: he is called
+    a:
+    - er heißt
+
+  - q: she is called
+    a:
+    - sie heißt
+
+  - q: it is called
+    a:
+    - es heißt
+
+  - q: we are called
+    a:
+    - wir heißen
+
+  - q: you are called (pl)
+    a:
+    - ihr heißt
+    - ihr heiße
+
+  - q: they are called
+    a:
+    - Sie heißen
+    - Sie heiße
+
+  - q: I am
+    a:
+    - ich bin
+    - ich ißt
+    - mir ist
+
+  - q: you are (i)
+    a:
+    - du bist
+    - du ist
+
+  - q: he is
+    a:
+    - er ist
+    - es ist
+
+  - q: she is
+    a:
+    - sie ist
+
+  - q: it is
+    a:
+    - es ist
+
+  - q: we are
+    a:
+    - wir sind
+    - wir sein
+
+  - q: you are (pl)
+    a:
+    - ihr seid
+
+  - q: they are
+    a:
+    - Sie sind
+
+  - q: I make
+    a:
+    - ich mache
+
+  - q: you make (i)
+    a:
+    - du machst
+
+  - q: he makes
+    a:
+    - er macht
+
+  - q: she makes
+    a:
+    - sie macht
+
+  - q: it makes
+    a:
+    - es macht
+
+  - q: we make
+    a:
+    - wir machen
+
+  - q: you make (pl)
+    a:
+    - ihr macht
+
+  - q: they make
+    a:
+    - Sie machen
+
+  - q: to sit
+    a:
+    - sitzen
+
+  - q: I sit
+    a:
+    - ich sitze
+
+  - q: you sit (i)
+    a:
+    - du sitzt
+
+  - q: he sits
+    a:
+    - er sitzt
+
+  - q: we sit
+    a:
+    - wir sitzen
+
+  - q: you sit (pl)
+    a:
+    - ihr sitzt
+
+  - q: they sit
+    a:
+    - Sie sitzen
+
+  - q: to work
+    a:
+    - arbeiten
+
+  - q: I work
+    a:
+    - ich arbeite
+
+  - q: you work (i)
+    a:
+    - du arbeitest
+
+  - q: he works
+    a:
+    - er arbeitet
+
+  - q: she works
+    a:
+    - sie arbeitet
+
+  - q: it works
+    a:
+    - es arbeitet
+
+  - q: we work
+    a:
+    - wir arbeiten
+
+  - q: you work (pl)
+    a:
+    - ihr arbeitet
+
+  - q: they work
+    a:
+    - Sie arbeiten
+
+  - q: I play
+    a:
+    - ich spiele
+
+  - q: you play (i)
+    a:
+    - du spielst
+
+  - q: he plays
+    a:
+    - er spielt
+
+  - q: she plays
+    a:
+    - sie spielt
+
+  - q: it plays
+    a:
+    - es spielt
+
+  - q: we play
+    a:
+    - wir spielen
+
+  - q: you play (pl)
+    a:
+    - ihr spielt
+
+  - q: they play
+    a:
+    - Sie spielen
+
+  - q: I fly
+    a:
+    - ich fliege
+
+  - q: you fly (i)
+    a:
+    - du fliegst
+    - du fliegt
+
+  - q: he flies
+    a:
+    - er fliegt
+
+  - q: she flies
+    a:
+    - sie fliegt
+
+  - q: it flies
+    a:
+    - es fliegt
+
+  - q: we fly
+    a:
+    - wir fliegen
+
+  - q: you fly (pl)
+    a:
+    - ihr fliegt
+
+  - q: they fly
+    a:
+    - Sie fliegen
+
+  - q: Where do you live?
+    a:
+    - wo wohnen Sie?
+    - wo kommen Sie?
+    tags:
+    - questions
+
+  - q: I live in...
+    a:
+    - Ich wohne in...
+    - Ich komme aus...
+
+  - q: where (from)
+    a:
+    - woher
+
+  - q: where do you come from?
+    a:
+    - woher kommen Sie?
+    - wer kommen Sie?
+    - wo kommen Sie?
+    tags:
+    - questions
+
+  - q: I come from...
+    a:
+    - Ich komme aus...
+    - Ich wohne in...
+
+  - q: who
+    a:
+    - wer
+    - wo
+
+  - q: who is this?
+    a:
+    - wer ist das?
+    - wo ist das?
+    tags:
+    - questions
+
+  - q: where
+    a:
+    - wo
+
+  - q: what
+    a:
+    - was
+
+  - q: what is this?
+    a:
+    - was ist das?
+    tags:
+    - questions
+
+  - q: that is...
+    a:
+    - das ist...
+
+  - q: that is my new car
+    a:
+    - das ist mein neues Auto
+    - das ist mein neue Auto
+
+  - q: what is this in English?
+    a:
+    - wie heißt das auf Englisch?
+    tags:
+    - questions
+
+  - q: do you speak German?
+    a:
+    - sprechen Sie Deutsch?
+    tags:
+    - questions
+
+  - q: are there any..?
+    a:
+    - gibt es..?
+    tags:
+    - questions
+
+  - q: is there a..?
+    a:
+    - gibt es..?
+    tags:
+    - questions
+
+  - q: Switzerland
+    a:
+    - Schweiz
+
+  - q: German
+    a:
+    - Deutsch
+
+  - q: French
+    a:
+    - Französisch
+
+  - q: Italian
+    a:
+    - Italienisch
+
+  - q: France
+    a:
+    - Frankreich
+
+  - q: French
+    a:
+    - Französisch
+
+  - q: Greece
+    a:
+    - Griechenland
+
+  - q: Greek
+    a:
+    - Griechisch
+
+  - q: Italy
+    a:
+    - Italien
+
+  - q: Italian
+    a:
+    - Italienisch
+
+  - q: Spain
+    a:
+    - Spanien
+
+  - q: Spanish
+    a:
+    - Spanisch
+
+  - q: I am not so good
+    a:
+    - mir geht es nicht so gut
+    - ich bin nicht so gut
+
+  - q: I have a cold
+    a:
+    - Ich habe eine Erkältung
+    - mir hat eine Erkältung
+    - ich bin eine Erkältung
+
+  - q: cold (achoo)
+    a:
+    - die Erkältung
+    - die Kalt
+    - der Erkältung
+    - der Kalt
+
+  - q: get well soon
+    a:
+    - gute Besserung
+
+  - q: to wish
+    a:
+    - wünschen
+    - wischen
+
+  - q: what are you doing?
+    a:
+    - was machst du?
+    tags:
+    - questions
+
+  - q: where is my book?
+    a:
+    - wo ist mein Buch?
+    tags:
+    - questions
+
+  - q: where to
+    a:
+    - wohin
+    - woher
+    - wo
+    - wer
+
+  - q: where are you going?
+    a:
+    - wohin gehst du?
+    - woher gehst du?
+    - woher geht du?
+    tags:
+    - questions
+
+  - q: where from
+    a:
+    - woher
+    - wo
+    - wohin
+
+  - q: where do you come from?
+    a:
+    - woher kommst du?
+    - wohin kommst du?
+    - woher gehst du?
+    tags:
+    - questions
+
+  - q: why
+    a:
+    - warum
+    - wo
+    - wer
+
+  - q: why are you so tired?
+    a:
+    - warum bist du so müde?
+    tags:
+    - questions
+
+  - q: when
+    a:
+    - wann
+
+  - q: wann gehst du nach Hause?
+    a:
+    - when are you going home?
+    tags:
+    - questions
+
+  - q: ich sehe den Mann
+    a:
+    - I see the man
+
+  - q: ich sehe einen Mann
+    a:
+    - I see a man
+
+  - q: ich sehe die Frau
+    a:
+    - I see the lady
+
+  - q: ich sehe eine Frau
+    a:
+    - I see a lady
+
+  - q: ich sehe das Kind
+    a:
+    - I see the child
+
+  - q: ich sehe ein Kind
+    a:
+    - I see a child
+
+  - q: ich sehe die Kinder
+    a:
+    - I see the children
+
+  - q: ich sehe Kinder
+    a:
+    - I see children
+
+  - q: der Opa repariert das Auto
+    a:
+    - granddad repairs the car
+    tags:
+    - case
+
+  - q: der Vogel isst den Wurm
+    a:
+    - the Bird eats the worm
+    tags:
+    - case
+
+  - q: die Kinder lieben die Mutter
+    a:
+    - the children love the mother
+    tags:
+    - case
+
+  - q: die Kinder essen die Äpfel
+    a:
+    - the children eat the apples
+    tags:
+    - case
+
+  - q: die Frau trägt einen roten Rock
+    a:
+    - the woman wears a red skirt
+    tags:
+    - case
+
+  - q: das Mädchen trägt ein blaues Kleid
+    a:
+    - the girl wears a blue dress
+    tags:
+    - case
+
+  - q: der Opa trägt eine blaue Latzhose
+    a:
+    - granddad wears blue dungarees
+    tags:
+    - case
+
+  - q: I shake hands with the man
+    a:
+    - Ich gebe dem Mann die Hand
+    - Ich gebe der Mann die Hand
+    trivia: der -> dem (gen)
+    tags:
+    - case
+
+  - q: I shake hands with a man
+    a:
+    - Ich gebe einem Mann die Hand
+    - Ich gebe ein Mann die Hand
+    trivia: ein -> einem (gen)
+    tags:
+    - case
+
+  - q: I shake hands with the lady
+    a:
+    - Ich gebe der Frau die Hand
+    - Ich gebe die Frau die Hand
+    trivia: die -> der (gen)
+    tags:
+    - case
+
+  - q: I shake hands with a lady
+    a:
+    - Ich gebe einer Frau die Hand
+    - Ich gebe eine Frau die Hand
+    trivia: eine -> einer (gen)
+    tags:
+    - case
+
+  - q: I shake hands with the child
+    a:
+    - Ich gebe dem Kind die Hand
+    - Ich gebe das Kind die Hand
+    trivia: das -> dem (gen)
+    tags:
+    - case
+
+  - q: I shake hands with a child
+    a:
+    - Ich gebe einem Kind die Hand
+    - Ich gebe ein Kind die Hand
+    - Ich gebe eine Kind die Hand
+    trivia: ein -> einem (gen)
+    tags:
+    - case
+
+  - q: I shake hands with the children
+    a:
+    - Ich gebe den Kindern die Hand
+    - Ich gebe die Kindern die Hand
+    trivia: die -> den (gen)
+    tags:
+    - case
+
+  - q: I shake hands with children
+    a:
+    - Ich gebe Kindern die Hand
+    tags:
+    - case
+
+  - q: The cat sits on the roof
+    a:
+    - Die Katze sitzt auf dem Dach
+    - Die Katze sitzt auf das Dach
+    trivia: das -> dem (gen)
+    tags:
+    - case
+
+  - q: The cat sits on a roof
+    a:
+    - Die Katze sitzt auf einem Dach
+    - Die Katze sitzt auf ein Dach
+    trivia: ein -> einem (gen)
+    tags:
+    - case
+
+  - q: The cat sits in front of the door
+    a:
+    - Die Katze sitzt vor der Tür
+    - Die Katze sitzt vor die Tür
+    trivia: die -> der (gen)
+    tags:
+    - case
+
+  - q: The cat sits in front of a door
+    a:
+    - Die Katze sitzt vor einer Tür
+    - Die Katze sitzt vor eine Tür
+    trivia: eine -> einer (gen)
+    tags:
+    - case
+
+  - q: The bird sits in the tree
+    a:
+    - Der Vogel sitzt in dem Baum
+    - Der Vogel sitzt in der Baum
+    trivia: der -> dem (gen)
+    tags:
+    - case
+
+  - q: The bird sits in a tree
+    a:
+    - Der Vogel sitzt in einem Baum
+    - Der Vogel sitzt in ein Baum
+    trivia: ein -> einem (gen)
+    tags:
+    - case
+
+  - q: The cat sits among the houses
+    a:
+    - Die Katze sitzt zwischen den Häusern
+    - Die Katze sitzt zwischen die Häuser
+    trivia: (pl) so die -> den (gen)
+    tags:
+    - case
+
+  - q: The cat sits among houses
+    a:
+    - Die Katze sitzt zwischen Häusern
+    tags:
+    - case
+
+  - q: I have a nice mother
+    a:
+    - ich habe eien nette Mutter
+    trivia: accusative case + female object
+    tags:
+    - case
+
+  - q: the girl lives in a beautiful house
+    a:
+    - das Mädchen wohnt in einem schönen Haus
+    trivia: dative case following preposition + neuter direct object with indefinite article
+    tags:
+    - case
+
+  - q: the children like eating cake
+    a:
+    - die Kinder essen gerne Kuchen
+    trivia: accusative case + plural + indefinite article
+    tags:
+    - case
+
+  - q: the castle stands on top of the mountain
+    a:
+    - das Schloss steht auf dem Berg
+    trivia: dative case following preposition + male direct object with definite article
+    tags:
+    - case
+
+# Der Hund der Frau beißt den Mann. => genitive case & female indirect object, accusative case & male direct object
+
+# Die Frau trägt ein blaues Kleid. => accusative case of neuter object with indefinite article
+
+# Die Katze isst den Fisch. => accusative case of male object with direct article
+
+# Der Mann bezahlt den Kellner. => accusative case of male object with definite article
+
+# Der Lehrer gibt dem Kind das Buch. => dative case of neuter indirect object with definite article, accusative case of neuter direct object with definite article
+
+# Der Vogel sitzt auf einem großen Baum. (could also have been “dem großen Baum”) dative case of direct object following preposition with indefinite article
+
+# Der Opa repariert das Auto. => accusative case of neuter direct object with definite article
+
+# Die Kinder spielen mit dem Wasser. => dative case of neuter direct object following a prepositionwith definite article
+
+# Ich sitze auf dem Stuhl. => dative case of direct object following a preposition with definite article
+
+# Der Vater kauft ein neues Auto. => accusative case of neuter direct object with indefinite article
+
+# Man darf die Vögel nicht füttern. => accusative case of female direct object with definite article
+
+# Der Junge fällt in den See. => accusative case of male direct object with definite article
+
+# Das ist Toms Fahrrad. => genitive case involving a name
+
+- "taken from Veronika's German lessons, many thanks! Key: (i) informal, (f) formal, (pl) informal plural, (gen) genitive)"
