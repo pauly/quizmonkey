@@ -3,6 +3,7 @@
 const React = require('react');
 
 const CategoryLinks = module.exports = ({ categories, changeCategory }) => {
+  if (categories.length <= 1) return <script />;
   return (
     <p>Category:
       {' '}

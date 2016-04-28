@@ -1,0 +1,42 @@
+- Guess who?
+
+- - q: Runs for charity
+    a:
+    - Sophie
+    trivia: Sponsor her
+
+  - q: Was a superstar DJ
+    a:
+    - Huzz
+
+  - q: Speaks Dutch
+    a:
+    - Thomas
+
+  - q: Sang "Stand By Me"
+    a:
+    - Sam
+
+  - q: Brews beer
+    a:
+    - Paul
+
+  - q: Is a vegan
+    a:
+    - Paul
+
+  - q: Keeps committing things after the mirror
+    a:
+    - Paul
+    trivia: He's really sorry and will try harder
+
+  - q: Created the "bits" system
+    a:
+    - Paul
+    trivia: He's really sorry and will try harder
+
+- Just as a trial... Think it's a goer? Fork me and pull request data/guess-who.yml
+# - images:
+#     Sophie: http://my.holidayextras.com/wp-content/uploads/avatars/466/32d96bb59c6571e1035694551224850a-bpfull.jpg
+#     Huzz: http://www.gravatar.com/avatar/804ad167803fc170fbd4651d459ada5b?d=http://my.holidayextras.com/wp-content/plugins/buddypress/bp-core/images/mystery-man.jpg&s=240&r=G
+#     default: http://i0.wp.com/my.holidayextras.com/wp-content/plugins/buddypress/bp-core/images/mystery-man.jpg

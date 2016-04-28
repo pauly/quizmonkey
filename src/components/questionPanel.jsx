@@ -6,12 +6,12 @@ const Result = require('./result');
 
 const QuestionPanel = module.exports = ({ attempts, category, handleAnswer, previous, question, score }) => {
   return (
-    <div>
+    <div className={category.toLowerCase()}>
       <h2>{category} {score} / {attempts}</h2>
       <h3>{question.question}</h3>
       <div className="btn-toobar">
         {question.answers.map((answer, i) => {
-          return <Button key={i} onClick={() => handleAnswer(question, answer)}>{answer}</Button>;
+          return <Button className={answer.toLowerCase()} key={i} onClick={() => handleAnswer(question, answer)}>{answer}</Button>;
         })}
       </div>
       <Result previous={previous} />
