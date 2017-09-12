@@ -104,17 +104,15 @@ helpers.randomQuestion = (category, choices, options, attempts = 0) => {
   const questions = category.questions || category[1]
   const id = Math.floor(Math.random() * questions.length)
   let question = helpers.buildQuestion(id, questions, choices)
-  if (process.env.NODE_ENV !== 'production') {
-    if (!options) return question
-    // if (!question.tags) return question;
-    question.tags = question.tags || []
-    const useThis = question.tags.reduce((prev, next) => {
-      if (options[next]) return true
-      return prev
-    }, false)
-    if (!useThis && attempts < questions.length) {
-      return helpers.randomQuestion(category, choices, options, attempts + 1)
-    }
+  if (!options) return question
+  // if (!question.tags) return question;
+  question.tags = question.tags || []
+  const useThis = question.tags.reduce((prev, next) => {
+    if (options[next]) return true
+    return prev
+  }, false)
+  if (!useThis && attempts < questions.length) {
+    return helpers.randomQuestion(category, choices, options, attempts + 1)
   }
   return question
 }
