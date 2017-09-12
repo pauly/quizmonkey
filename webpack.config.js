@@ -1,12 +1,12 @@
-'use strict';
+'use strict'
 
-var path = require('path');
-var webpack = require('webpack');
+var path = require('path')
+var webpack = require('webpack')
 
 var envifyPlugin = new webpack.DefinePlugin({
   'process.env': { NODE_ENV: JSON.stringify(process.env.NODE_ENV) }
-});
-var dedupePlugin = new webpack.optimize.DedupePlugin();
+})
+var dedupePlugin = new webpack.optimize.DedupePlugin()
 var uglifyPlugin = new webpack.optimize.UglifyJsPlugin({
   compress: {
     warnings: false,
@@ -39,10 +39,10 @@ var uglifyPlugin = new webpack.optimize.UglifyJsPlugin({
     space_colon: false,
     comments: false
   }
-});
-var plugins = [];
+})
+var plugins = []
 if (process.env.NODE_ENV === 'production') {
-  plugins = [envifyPlugin, dedupePlugin, uglifyPlugin];
+  plugins = [envifyPlugin, dedupePlugin, uglifyPlugin]
 }
 
 module.exports = {
@@ -85,4 +85,4 @@ module.exports = {
       }
     ]
   }
-};
+}

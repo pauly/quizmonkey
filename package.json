@@ -4,11 +4,10 @@
   "description": "Quiz",
   "main": "build/index.js",
   "scripts": {
-    "prebuild": "npm test && npm run lint",
-    "data": "./scripts/yml2json.js",
     "prebuild": "npm run data",
+    "data": "./scripts/yml2json.js",
     "build": "NODE_ENV=production webpack",
-    "lint": "make-up src/ scripts/ test/",
+    "lint": "standard --fix",
     "start": "npm run build && open index.html",
     "test": "mocha",
     "prewatch": "npm run data",
@@ -29,6 +28,18 @@
     "url": "https://github.com/pauly/quizmonkey/issues"
   },
   "homepage": "https://github.com/pauly/quizmonkey#readme",
+  "standard": {
+    "global": [
+      "after",
+      "afterEach",
+      "before",
+      "beforeEach",
+      "context",
+      "describe",
+      "expect",
+      "it"
+    ]
+  },
   "devDependencies": {
     "babel": "^6.5.2",
     "babel-core": "^6.6.5",
@@ -41,7 +52,6 @@
     "dirty-chai": "^1.2.2",
     "fs": "0.0.2",
     "json-loader": "^0.5.4",
-    "make-up": "^8.1.0",
     "mocha": "^2.4.5",
     "sinon": "^1.17.3",
     "sinon-chai": "^2.8.0",
@@ -50,5 +60,7 @@
     "webpack-dev-server": "^1.14.1",
     "yamljs": "^0.2.6"
   },
-  "dependencies": {}
+  "dependencies": {
+    "standard": "10.0.3"
+  }
 }
