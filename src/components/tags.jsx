@@ -3,6 +3,9 @@
 const React = require('react')
 
 const Tags = module.exports = ({ filter, tags }) => {
+  if (process.env.NODE_ENV === 'production') {
+    return <p><i>(tags not working in production yet)</i></p>
+  }
   if (tags.length < 2) return <script />
   return (
     <div>{tags.map((tag) => {
