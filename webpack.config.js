@@ -1,13 +1,21 @@
 'use strict'
 
-var path = require('path')
-var webpack = require('webpack')
+const path = require('path')
+const webpack = require('webpack')
 
-var envifyPlugin = new webpack.DefinePlugin({
+const InlinePlugin = require('html-webpack-inline-source-plugin');
+const inlinePlugin = new InlinePlugin()
+const HtmlPlugin = require('html-webpack-plugin')
+const htmlPlugin = new HtmlPlugin({
+  title: process.env.npm_package_name,
+  inlineSource: '.(js|css)$',
+  template: 'src/assets/index.html'
+})
+
+const envifyPlugin = new webpack.DefinePlugin({
   'process.env': { NODE_ENV: JSON.stringify(process.env.NODE_ENV) }
 })
-var dedupePlugin = new webpack.optimize.DedupePlugin()
-var uglifyPlugin = new webpack.optimize.UglifyJsPlugin({
+const uglifyPlugin = new webpack.optimize.UglifyJsPlugin({
   compress: {
     warnings: false,
     properties: true,
@@ -40,9 +48,13 @@ var uglifyPlugin = new webpack.optimize.UglifyJsPlugin({
     comments: false
   }
 })
-var plugins = []
+let plugins = [
+  envifyPlugin,
+  htmlPlugin,
+  inlinePlugin
+]
 if (process.env.NODE_ENV === 'production') {
-  plugins = [envifyPlugin, dedupePlugin, uglifyPlugin]
+  plugins.push(uglifyPlugin)
 }
 
 module.exports = {
@@ -50,11 +62,10 @@ module.exports = {
     bundle: './src/index.jsx'
   },
   resolve: {
-    extensions: ['', '.js', '.jsx', '.json']
+    extensions: ['.js', '.jsx', '.json']
   },
   output: {
-    publicPath: 'dist',
-    path: 'dist',
+    path: path.resolve(__dirname, 'docs'),
     filename: '[name].js'
   },
   plugins: plugins,
@@ -64,9 +75,9 @@ module.exports = {
   },
   module: {
     loaders: [
-      {
+      /* {
         loader: 'transform/cacheable?brfs'
-      },
+      }, */
       {
         test: /\.yml/,
         loader: 'yaml-loader'
@@ -77,7 +88,7 @@ module.exports = {
       },
       {
         test: /\.jsx?$/,
-        loader: 'babel',
+        loader: 'babel-loader',
         include: path.resolve('./src'),
         query: {
           presets: ['es2015', 'react']
