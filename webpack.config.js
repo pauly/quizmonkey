@@ -53,8 +53,8 @@ module.exports = {
     extensions: ['', '.js', '.jsx', '.json']
   },
   output: {
-    publicPath: 'build',
-    path: 'build',
+    publicPath: 'dist',
+    path: 'dist',
     filename: '[name].js'
   },
   plugins: plugins,
