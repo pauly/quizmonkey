@@ -1,0 +1,20 @@
+instrumentation:
+  include-all-sources: true
+  extensions:
+    - .js
+    - .jsx
+  excludes:
+    - dist/**
+    - scripts/**
+    - webpack.config.js
+reporting:
+  print: summary
+  reports:
+  - html
+  - text
+check:
+  global:
+    statements: 96
+    lines: 100
+    branches: 93
+    functions: 100

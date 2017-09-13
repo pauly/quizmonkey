@@ -4,12 +4,13 @@
   "description": "Quiz",
   "main": "build/index.js",
   "scripts": {
+    "coverage": "istanbul cover _mocha && istanbul check-coverage",
     "prebuild": "npm run data",
     "data": "./scripts/yml2json.js",
     "build": "NODE_ENV=production webpack",
     "lint": "standard --fix",
     "start": "npm run build && open index.html",
-    "test": "mocha",
+    "test": "npm run lint && npm run coverage",
     "prewatch": "npm run data",
     "watch": "open http://localhost:8080/webpack-dev-server/ && webpack-dev-server --inline --hot"
   },
@@ -20,6 +21,7 @@
   "keywords": [
     "quiz",
     "react",
+    "italian",
     "german"
   ],
   "author": "Paul Clarke <pauly@clarkeology.com>",
@@ -30,6 +32,8 @@
   "homepage": "https://github.com/pauly/quizmonkey#readme",
   "standard": {
     "global": [
+      "sinon",
+      "sandbox",
       "after",
       "afterEach",
       "before",
@@ -51,6 +55,7 @@
     "chai": "^3.5.0",
     "dirty-chai": "^1.2.2",
     "fs": "0.0.2",
+    "istanbul": "1.0.0-alpha.2",
     "json-loader": "^0.5.4",
     "mocha": "^2.4.5",
     "sinon": "^1.17.3",

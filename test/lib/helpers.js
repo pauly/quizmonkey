@@ -1,8 +1,5 @@
 'use strict'
 
-const expect = require('chai').use(require('sinon-chai')).use(require('dirty-chai')).expect
-const sinon = require('sinon')
-const sandbox = sinon.sandbox.create()
 const helpers = require('../../src/lib/helpers')
 
 describe('helpers', () => {
@@ -81,10 +78,21 @@ describe('helpers', () => {
       expect(Math.random).not.to.be.called()
     })
 
-    it('returns null for no wrong answer', () => {
-      helpers.getWrongAnswers.returns([])
-      expect(helpers.randomWrongAnswer({})).to.be.null()
-      expect(Math.random).not.to.be.called()
+    describe('with no wrong answer', () => {
+      let result = null
+
+      beforeEach(() => {
+        helpers.getWrongAnswers.returns([])
+        result = helpers.randomWrongAnswer({})
+      })
+
+      it('returns null', () => {
+        expect(result).to.be.null()
+      })
+
+      it('does not need to call Math.random', () => {
+        expect(Math.random).not.to.have.been.called()
+      })
     })
 
     describe('one misleading answer', () => {
@@ -244,6 +252,242 @@ describe('helpers', () => {
       it('returns an array of options', () => {
         const sorted = helpers.pickMultipleChoiceAnswers(question, questions, 3).sort()
         expect(sorted).to.deep.equal(['bar', 'etc', 'foo'])
+      })
+    })
+  })
+
+  describe('answerIsSimilar', () => {
+    let result = null
+
+    beforeEach(() => {
+      sandbox.stub(helpers, 'answerIsSame')
+      sandbox.stub(helpers, 'getYear')
+      sandbox.stub(helpers, 'firstChars')
+    })
+
+    describe('answer is same', () => {
+      beforeEach(() => {
+        helpers.answerIsSame.returns(true)
+        result = helpers.answerIsSimilar('foo', 'bar', 'etc')
+      })
+
+      it('returns false (we want close enough but not identical)', () => {
+        expect(result).to.be.false()
+      })
+
+      it('does not need to look up the year', () => {
+        expect(helpers.getYear).not.to.have.been.called()
+      })
+
+      it('does not need to compare strings', () => {
+        expect(helpers.firstChars).not.to.have.been.called()
+      })
+    })
+
+    describe('answers look like years', () => {
+      beforeEach(() => {
+        helpers.answerIsSame.returns(false)
+        helpers.getYear.withArgs('foo').returns(1970)
+        helpers.getYear.withArgs('bar').returns(1980)
+      })
+
+      describe('within range', () => {
+        beforeEach('before', () => {
+          result = helpers.answerIsSimilar('foo', 'bar', 10)
+        })
+
+        it('returns true', () => {
+          expect(result).to.be.true()
+        })
+
+        it('does not need to compare strings', () => {
+          expect(helpers.firstChars).not.to.have.been.called()
+        })
+      })
+
+      describe('out of range', () => {
+        beforeEach('before', () => {
+          result = helpers.answerIsSimilar('foo', 'bar', 9)
+        })
+
+        it('returns false', () => {
+          expect(result).to.be.false()
+        })
+
+        it('does not need to compare strings', () => {
+          expect(helpers.firstChars).not.to.have.been.called()
+        })
+      })
+    })
+
+    describe('answers do not look like years', () => {
+      beforeEach(() => {
+        helpers.answerIsSame.returns(false)
+        helpers.getYear.returns(null)
+      })
+
+      describe('within range', () => {
+        beforeEach('before', () => {
+          helpers.firstChars.withArgs('foo', 'etc').returns('FOO')
+          helpers.firstChars.withArgs('bar', 'etc').returns('FOO')
+          result = helpers.answerIsSimilar('foo', 'bar', 'etc')
+        })
+
+        it('compared the string strings', () => {
+          expect(helpers.firstChars).to.have.been.calledTwice()
+            .and.calledWith('foo', 'etc')
+            .and.calledWith('bar', 'etc')
+        })
+
+        it('returns true', () => {
+          expect(result).to.be.true()
+        })
+      })
+
+      describe('out of range', () => {
+        beforeEach('before', () => {
+          helpers.firstChars.withArgs('foo', 'etc').returns('FOO')
+          helpers.firstChars.withArgs('bar', 'etc').returns('BAR')
+          result = helpers.answerIsSimilar('foo', 'bar', 'etc')
+        })
+
+        it('compared the string strings', () => {
+          expect(helpers.firstChars).to.have.been.calledTwice()
+            .and.calledWith('foo', 'etc')
+            .and.calledWith('bar', 'etc')
+        })
+
+        it('returns false', () => {
+          expect(result).to.be.false()
+        })
+      })
+    })
+  })
+
+  describe('randomQuestion', () => {
+    let category = null
+    let builtQuestion = null
+    let result = null
+
+    beforeEach(() => {
+      builtQuestion = {
+        built: 'ok',
+        tags: ['TAG']
+      }
+      sandbox.stub(helpers, 'buildQuestion').returns(builtQuestion)
+    })
+
+    describe('with category with old style named index', () => {
+      beforeEach(() => {
+        category = {
+          questions: [
+            {
+              q: 'foo',
+              a: ['bar'],
+              tags: ['etc']
+            }
+          ]
+        }
+        result = helpers.randomQuestion(category, 'choices', 'options')
+      })
+
+      it('builds a question', () => {
+        expect(helpers.buildQuestion).to.have.been.called()
+      })
+
+      it('returns the randomly selected question', () => {
+        expect(result).to.deep.equal(builtQuestion)
+      })
+    })
+
+    describe('with category with numerical index', () => {
+      beforeEach(() => {
+        category = [
+          'foo',
+          [
+            {
+              q: 'foo',
+              a: ['bar'],
+              tags: ['etc']
+            }
+          ]
+        ]
+      })
+
+      describe('with no options', () => {
+        beforeEach(() => {
+          result = helpers.randomQuestion(category, 'choices')
+        })
+
+        it('builds a question', () => {
+          expect(helpers.buildQuestion).to.have.been.called()
+        })
+
+        it('returns that question', () => {
+          expect(result).to.deep.equal(builtQuestion)
+        })
+
+        it('does not need to try again', () => {
+          expect(helpers.buildQuestion).to.have.been.calledOnce()
+        })
+      })
+
+      describe('with a matching tag option', () => {
+        beforeEach(() => {
+          result = helpers.randomQuestion(category, 'choices', { TAG: true })
+        })
+
+        it('builds a question', () => {
+          expect(helpers.buildQuestion).to.have.been.called()
+        })
+
+        it('returns that question', () => {
+          expect(result).to.deep.equal(builtQuestion)
+        })
+
+        it('does not need to try again', () => {
+          expect(helpers.buildQuestion).to.have.been.calledOnce()
+        })
+      })
+
+      describe('with no tags', () => {
+        beforeEach(() => {
+          builtQuestion = {
+            built: 'ok'
+          }
+          helpers.buildQuestion.returns(builtQuestion)
+          result = helpers.randomQuestion(category, 'choices', { TAG: true })
+        })
+
+        it('builds a question', () => {
+          expect(helpers.buildQuestion).to.have.been.called()
+        })
+
+        it('returns that question', () => {
+          expect(result).to.deep.equal(builtQuestion)
+        })
+
+        it('had to try again (because question did not match our tag request)', () => {
+          expect(helpers.buildQuestion).to.have.been.calledTwice()
+        })
+      })
+
+      describe('without a matching tag option', () => {
+        beforeEach(() => {
+          result = helpers.randomQuestion(category, 'choices', {})
+        })
+
+        it('builds a question', () => {
+          expect(helpers.buildQuestion).to.have.been.called()
+        })
+
+        it('returns that question', () => {
+          expect(result).to.deep.equal(builtQuestion)
+        })
+
+        it('had to try again', () => {
+          expect(helpers.buildQuestion).to.have.been.calledTwice()
+        })
       })
     })
   })
