@@ -107,9 +107,9 @@ helpers.randomQuestion = (category, choices, options, attempts = 0) => {
   if (!options) return question
   // if (!question.tags) return question;
   question.tags = question.tags || []
-  const useThis = question.tags.reduce((prev, next) => {
-    if (options[next]) return true
-    return prev
+  const useThis = question.tags.reduce((ok, tag) => {
+    if (options[tag]) return true
+    return ok
   }, false)
   if (!useThis && attempts < questions.length) {
     return helpers.randomQuestion(category, choices, options, attempts + 1)
