@@ -34,3 +34,5 @@ node_modules
 
 .eslintrc
 data/*.json
+
+.nyc_output
