@@ -105,7 +105,6 @@ helpers.randomQuestion = (category, choices, options, attempts = 0) => {
   const id = Math.floor(Math.random() * questions.length)
   let question = helpers.buildQuestion(id, questions, choices)
   if (!options) return question
-  // if (!question.tags) return question;
   question.tags = question.tags || []
   const useThis = question.tags.reduce((ok, tag) => {
     if (options[tag]) return true
@@ -119,12 +118,12 @@ helpers.randomQuestion = (category, choices, options, attempts = 0) => {
 
 helpers.getTags = (questions, options) => {
   if (!questions) return []
-  return Object.keys(questions.reduce((prev, next) => {
-    if (!next.tags) return prev
-    next.tags.forEach(tag => {
-      prev[tag] = true
+  return Object.keys(questions.reduce((allTags, tag) => {
+    if (!tag.tags) return allTags
+    tag.tags.forEach(tag => {
+      allTags[tag] = true
     })
-    return prev
+    return allTags
   }, {}))
     .sort()
     .map(tag => {

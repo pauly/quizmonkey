@@ -3,7 +3,7 @@
 const path = require('path')
 const webpack = require('webpack')
 
-const InlinePlugin = require('html-webpack-inline-source-plugin');
+const InlinePlugin = require('html-webpack-inline-source-plugin')
 const inlinePlugin = new InlinePlugin()
 const HtmlPlugin = require('html-webpack-plugin')
 const htmlPlugin = new HtmlPlugin({

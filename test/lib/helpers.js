@@ -3,11 +3,15 @@
 const helpers = require('../../src/lib/helpers')
 
 describe('helpers', () => {
+  let env = null
+
   beforeEach(() => {
+    env = process.env.NODE_ENV
     sandbox.stub(console, 'info')
   })
 
   afterEach(() => {
+    process.env.NODE_ENV = env
     sandbox.restore()
   })
 
@@ -195,7 +199,7 @@ describe('helpers', () => {
 
     beforeEach(() => {
       questions = [
-        { question: 'foo', trivia: 'triv 0' },
+        { question: 'foo', trivia: 'triv 0', tags: 'tags 0' },
         { question: 'foo' }
       ]
       sandbox.stub(helpers, 'pickMultipleChoiceAnswers').returns('etc')
@@ -207,13 +211,14 @@ describe('helpers', () => {
         id: 0,
         question: 'foo',
         trivia: 'triv 0',
+        tags: 'tags 0',
         answer: 'bar',
         answers: 'etc'
       }
       expect(helpers.buildQuestion(0, questions)).to.deep.equal(expected)
     })
 
-    it('only populates trivia if present', () => {
+    it('only populates trivia + tags if present', () => {
       const expected = {
         id: 1,
         question: 'foo',
@@ -227,6 +232,7 @@ describe('helpers', () => {
   describe('pickMultipleChoiceAnswers', () => {
     const questions = [{ answer: 'foo' }]
     const question = { answer: 'bar' }
+    let result = null
 
     beforeEach(() => {
       sandbox.stub(helpers, 'randomWrongAnswer')
@@ -236,22 +242,47 @@ describe('helpers', () => {
     describe('with no random wrong answer', () => {
       beforeEach(() => {
         helpers.randomWrongAnswer.returns(null)
+        result = helpers.pickMultipleChoiceAnswers(question, questions, 3).sort()
       })
 
       it('returns an array of options', () => {
-        const sorted = helpers.pickMultipleChoiceAnswers(question, questions, 3).sort()
-        expect(sorted).to.deep.equal(['bar', 'foo', 'foo'])
+        expect(result).to.deep.equal(['bar', 'foo', 'foo'])
       })
     })
 
-    describe('without a random wrong answer', () => {
+    describe('with a random wrong answer', () => {
       beforeEach(() => {
         helpers.randomWrongAnswer.returns('etc')
       })
 
-      it('returns an array of options', () => {
-        const sorted = helpers.pickMultipleChoiceAnswers(question, questions, 3).sort()
-        expect(sorted).to.deep.equal(['bar', 'etc', 'foo'])
+      describe('in production', () => {
+        beforeEach(() => {
+          process.env.NODE_ENV = 'production'
+          result = helpers.pickMultipleChoiceAnswers(question, questions, 3).sort()
+        })
+
+        it('returns an array of options', () => {
+          expect(result).to.deep.equal(['bar', 'etc', 'foo'])
+        })
+
+        it('does not console.log', () => {
+          expect(console.info).not.to.have.been.called()
+        })
+      })
+
+      describe('in other environments', () => {
+        beforeEach(() => {
+          process.env.NODE_ENV = 'foo'
+          result = helpers.pickMultipleChoiceAnswers(question, questions, 3).sort()
+        })
+
+        it('returns an array of options', () => {
+          expect(result).to.deep.equal(['bar', 'etc', 'foo'])
+        })
+
+        it('console.log', () => {
+          expect(console.info).to.have.been.calledOnce()
+        })
       })
     })
   })
