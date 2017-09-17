@@ -229,6 +229,41 @@ describe('helpers', () => {
     })
   })
 
+  describe('multipleChoicePopulator', () => {
+    let result = null
+    let question = null
+    let answers = null
+    let item = null
+
+    beforeEach(() => {
+      question = 'QUESTION'
+      answers = ['ANSWER1', 'ANSWER2']
+      item = 'ITEM'
+      sandbox.stub(helpers, 'answerIsSimilar')
+    })
+
+    describe('when we have enough options', () => {
+      beforeEach(() => {
+        result = helpers.multipleChoicePopulator(1, 2, question, answers, item)
+      })
+
+      it('returns the answers we have', () => {
+        expect(result).to.have.length(2)
+      })
+    })
+
+    describe('when new option is not similar enough', () => {
+      beforeEach(() => {
+        helpers.answerIsSimilar.returns(false)
+        result = helpers.multipleChoicePopulator(1, 3, question, answers, item)
+      })
+
+      it('returns the answers we have', () => {
+        expect(result).to.have.length(2)
+      })
+    })
+  })
+
   describe('pickMultipleChoiceAnswers', () => {
     const questions = [{ answer: 'foo' }]
     const question = { answer: 'bar' }
@@ -518,6 +553,24 @@ describe('helpers', () => {
 
         it('had to try again', () => {
           expect(helpers.buildQuestion).to.have.been.calledTwice()
+        })
+      })
+
+      describe('after too many attempts', () => {
+        beforeEach(() => {
+          result = helpers.randomQuestion(category, 'choices', {}, 2)
+        })
+
+        it('builds a question', () => {
+          expect(helpers.buildQuestion).to.have.been.called()
+        })
+
+        it('returns that question', () => {
+          expect(result).to.deep.equal(builtQuestion)
+        })
+
+        it('did not try again', () => {
+          expect(helpers.buildQuestion).to.have.been.calledOnce()
         })
       })
     })

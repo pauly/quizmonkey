@@ -25,7 +25,7 @@ helpers.getAnswer = (question) => {
   return question.answer
 }
 
-helpers.getQuestion = (question) => {
+helpers.getQuestion = question => {
   if (!question) return null
   return question.q || question.question
 }
@@ -70,6 +70,18 @@ helpers.buildQuestion = (id, questions, choices) => {
   return question
 }
 
+// @todo this has too many params
+helpers.multipleChoicePopulator = (delta, choices, question, answers, item) => {
+  if (answers.length >= choices) return answers
+  if (helpers.answerIsSimilar(question, item, delta)) {
+    /* if (process.env.NODE_ENV !== 'production') {
+      console.info(helpers.getQuestion(item), 'is within', delta)
+    } */
+    answers.push(helpers.getAnswer(item))
+  }
+  return answers
+}
+
 helpers.pickMultipleChoiceAnswers = (question, questions, choices) => {
   // one answer must be the right answer
   let answers = [helpers.getAnswer(question)]
@@ -84,18 +96,19 @@ helpers.pickMultipleChoiceAnswers = (question, questions, choices) => {
   }
 
   // fill up remaining slots with answers to other questions
-  const ranges = [3, 2, 1, 100, 200, 0]
+  const ranges = [
+    3, // similar answers within 3 years / matching 3 characters
+    2, // within 2 years / matching 2 characters
+    1, // within 1 year / matching 1 characters
+    100, // within 100 years etc, mostly useful for dates of kings and queens
+    200, // and the same as 100
+    0 // whatever
+  ]
   const shuffled = helpers.shuffle(questions)
-  ranges.forEach((diff) => {
+  ranges.forEach(delta => {
     if (answers.length >= choices) return
-    shuffled.forEach((item) => {
-      if (answers.length >= choices) return
-      if (!helpers.answerIsSimilar(question, item, diff)) return
-      /* if (process.env.NODE_ENV !== 'production') {
-        console.info(helpers.getQuestion(item.question), 'is within', diff);
-      } */
-      answers.push(helpers.getAnswer(item))
-    })
+    const reducer = helpers.multipleChoicePopulator.bind(null, delta, choices, question)
+    answers = shuffled.reduce(reducer, answers)
   })
   return helpers.shuffle(answers)
 }
@@ -107,13 +120,11 @@ helpers.randomQuestion = (category, choices, options, attempts = 0) => {
   if (!options) return question
   question.tags = question.tags || []
   const useThis = question.tags.reduce((ok, tag) => {
-    if (options[tag]) return true
-    return ok
+    return options[tag] ? true : ok
   }, false)
-  if (!useThis && attempts < questions.length) {
-    return helpers.randomQuestion(category, choices, options, attempts + 1)
-  }
-  return question
+  if (useThis) return question
+  if (attempts >= questions.length) return question
+  return helpers.randomQuestion(category, choices, options, attempts + 1)
 }
 
 helpers.getTags = (questions, options) => {
