@@ -59,10 +59,14 @@ if (process.env.NODE_ENV === 'production') {
 
 module.exports = {
   entry: {
-    bundle: './src/index.jsx'
+    bundle: './src/main'
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.json']
+    alias: {
+      // '@': path.resolve(__dirname, 'src'), // @todo not sure about this
+      'vue$': 'vue/dist/vue.esm.js' // 'vue/dist/vue.common.js' for webpack 1
+    },
+    extensions: ['.js', '.json', '.vue', '.html']
   },
   output: {
     path: path.resolve(__dirname, 'docs'),
@@ -75,9 +79,21 @@ module.exports = {
   },
   module: {
     loaders: [
-      /* {
-        loader: 'transform/cacheable?brfs'
-      }, */
+      {
+        test: /\.js$/,
+        loader: 'babel-loader',
+        query: {
+          presets: ['es2015']
+        },
+        include: [
+          path.resolve('src'),
+          path.resolve('test')
+        ]
+      },
+      {
+        test: /\.vue$/,
+        loader: 'vue-loader'
+      },
       {
         test: /\.yml/,
         loader: 'yaml-loader'
@@ -85,14 +101,6 @@ module.exports = {
       {
         test: /\.json$/,
         loader: 'json-loader'
-      },
-      {
-        test: /\.jsx?$/,
-        loader: 'babel-loader',
-        include: path.resolve('./src'),
-        query: {
-          presets: ['es2015', 'react']
-        }
       }
     ]
   }

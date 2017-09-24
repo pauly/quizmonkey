@@ -65,7 +65,7 @@ helpers.buildQuestion = (id, questions, choices) => {
     answer: helpers.getAnswer(questions[id])
   }
   if (questions[id].trivia) question.trivia = questions[id].trivia
-  if (questions[id].tags) question.tags = questions[id].tags
+  question.tags = questions[id].tags || []
   question.answers = helpers.pickMultipleChoiceAnswers(question, questions, choices)
   return question
 }
@@ -113,16 +113,18 @@ helpers.pickMultipleChoiceAnswers = (question, questions, choices) => {
   return helpers.shuffle(answers)
 }
 
+helpers.questionMatchesOptions = (question, options) => {
+  if (!options) return true
+  return question.tags.reduce((ok, tag) => {
+    return options[tag] ? true : ok
+  }, false)
+}
+
 helpers.randomQuestion = (category, choices, options, attempts = 0) => {
   const questions = category.questions || category[1]
   const id = Math.floor(Math.random() * questions.length)
-  let question = helpers.buildQuestion(id, questions, choices)
-  if (!options) return question
-  question.tags = question.tags || []
-  const useThis = question.tags.reduce((ok, tag) => {
-    return options[tag] ? true : ok
-  }, false)
-  if (useThis) return question
+  const question = helpers.buildQuestion(id, questions, choices)
+  if (helpers.questionMatchesOptions(question, options)) return question
   if (attempts >= questions.length) return question
   return helpers.randomQuestion(category, choices, options, attempts + 1)
 }

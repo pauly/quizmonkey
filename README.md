@@ -2,6 +2,8 @@
 
 Practice and quizzing and trying to learn some German.
 
+Now migrated from React to Vue.js
+
 ## Installation
 
 ```
@@ -20,6 +22,6 @@ npm run watch
 
 ## Try it out
 
-Hopefully the latest version is hosted here on github pages: http://pauly.github.io/quizmonkey/
+Latest version is hosted here on github pages: http://pauly.github.io/quizmonkey/
 
 With thanks to Veronika and her German lessons.
