@@ -218,12 +218,13 @@ describe('helpers', () => {
       expect(helpers.buildQuestion(0, questions)).to.deep.equal(expected)
     })
 
-    it('only populates trivia + tags if present', () => {
+    it('only populates trivia if present', () => {
       const expected = {
         id: 1,
         question: 'foo',
         answer: 'bar',
-        answers: 'etc'
+        answers: 'etc',
+        tags: []
       }
       expect(helpers.buildQuestion(1, questions)).to.deep.equal(expected)
     })
@@ -577,8 +578,8 @@ describe('helpers', () => {
   })
 
   describe('getTags', () => {
-    it('returns an array with no params', () => {
-      expect(helpers.getTags()).to.be.an('array').and.have.length(0)
+    it('returns an empty object with no params', () => {
+      expect(helpers.getTags()).to.deep.equal({})
     })
 
     it('identifies tags', () => {
@@ -591,10 +592,10 @@ describe('helpers', () => {
           tags: ['foo', 'bar']
         }
       ]
-      const expected = [
-        { tag: 'bar', value: null },
-        { tag: 'foo', value: null }
-      ]
+      const expected = {
+        foo: null,
+        bar: null
+      }
       expect(helpers.getTags(questions)).to.deep.equal(expected)
     })
 
@@ -606,12 +607,16 @@ describe('helpers', () => {
         },
         {
           tags: ['bar']
+        },
+        {
+          tags: ['etc']
         }
       ]
-      const expected = [
-        { tag: 'bar', value: 2 },
-        { tag: 'foo', value: 1 }
-      ]
+      const expected = {
+        bar: 2,
+        foo: 1,
+        etc: null
+      }
       expect(helpers.getTags(questions, options)).to.deep.equal(expected)
     })
   })

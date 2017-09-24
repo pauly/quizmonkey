@@ -1,8 +1,8 @@
 <template>
   <div class="category-tags">
-    <label class="checkbox-inline" v-for="tag in tags">
-      <input type="checkbox" v-on:click="filter" :checked="tag.value && 'checked'" :value="tag.tag" />
-      {{ tag.tag }}
+    <label class="checkbox-inline" v-for="(checked, tag) in tags">
+      <input type="checkbox" v-on:click="filter" :checked="checked && 'checked'" :value="tag" />
+      {{ tag }}
     </label>
   </div>
 </template>
@@ -16,7 +16,7 @@ export default {
     }
   },
   props: {
-    tags: Array
+    tags: Object
   }
 }
 </script>

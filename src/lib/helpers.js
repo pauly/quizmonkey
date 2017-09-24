@@ -113,33 +113,29 @@ helpers.pickMultipleChoiceAnswers = (question, questions, choices) => {
   return helpers.shuffle(answers)
 }
 
-helpers.questionMatchesOptions = (question, options) => {
-  if (!options) return true
+helpers.questionMatchesTags = (question, tags) => {
+  if (!tags) return true
   return question.tags.reduce((ok, tag) => {
-    return options[tag] ? true : ok
+    return tags[tag] ? true : ok
   }, false)
 }
 
-helpers.randomQuestion = (category, choices, options, attempts = 0) => {
+helpers.randomQuestion = (category, choices, tags, attempts = 0) => {
   const questions = category.questions || category[1]
   const id = Math.floor(Math.random() * questions.length)
   const question = helpers.buildQuestion(id, questions, choices)
-  if (helpers.questionMatchesOptions(question, options)) return question
+  if (helpers.questionMatchesTags(question, tags)) return question
   if (attempts >= questions.length) return question
-  return helpers.randomQuestion(category, choices, options, attempts + 1)
+  return helpers.randomQuestion(category, choices, tags, attempts + 1)
 }
 
-helpers.getTags = (questions, options) => {
-  if (!questions) return []
-  return Object.keys(questions.reduce((allTags, tag) => {
+helpers.getTags = questions => {
+  if (!questions) return {}
+  return questions.reduce((allTags, tag) => {
     if (!tag.tags) return allTags
     tag.tags.forEach(tag => {
-      allTags[tag] = true
+      allTags[tag] = allTags[tag] || null
     })
     return allTags
-  }, {}))
-    .sort()
-    .map(tag => {
-      return { tag: tag, value: options ? options[tag] : null }
-    })
+  }, {}) // @todo sort?
 }

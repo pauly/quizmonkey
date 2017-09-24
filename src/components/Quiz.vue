@@ -28,24 +28,20 @@ export default {
     changeCategory(selected) {
       this.selected = Number(selected)
       this.category = allCategories[this.selected]
-      this.tags = helpers.getTags(this.category[1], this.options)
-      this.question = helpers.randomQuestion(this.category, choices, this.options)
+      this.tags = helpers.getTags(this.category[1])
+      this.question = helpers.randomQuestion(this.category, choices, this.tags)
     },
     filter(tag) {
-      if (process.env.NODE_ENV !== 'production') {
-        console.log('got new tag', tag, 'options were', this.options)
-        console.log('tags were', this.tags, '@todo do we need options and tags?')
-      }
-      this.options[tag] = !this.options[tag]
-      if (!helpers.questionMatchesOptions(this.question, this.options)) {
-        this.question = helpers.randomQuestion(this.category, choices, this.options)
+      this.tags[tag] = !this.tags[tag]
+      if (!helpers.questionMatchesTags(this.question, this.tags)) {
+        this.question = helpers.randomQuestion(this.category, choices, this.tags)
       }
     },
     handleAnswer(question, answer) {
       if (answer === question.answer) this.score++
       this.attempts++
       this.previous = { answer, question }
-      this.question = helpers.randomQuestion(this.category, choices, this.options)
+      this.question = helpers.randomQuestion(this.category, choices, this.tags)
     }
   },
   data () {
@@ -55,7 +51,6 @@ export default {
       category,
       categories,
       choices,
-      options: {},
       previous: {
         question: {}
       },
