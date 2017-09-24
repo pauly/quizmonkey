@@ -1,11 +1,9 @@
 <template>
   <div class="question-panel">
-    <!-- <div :className={{ category.toLowerCase() }}> -->
     <div>
       <h2>{{ category}} {{ score }} / {{ attempts }}</h2>
       <h3>{{ question.question }}</h3>
       <div class="btn-toolbar">
-        <!-- class="btn btn-primary" -->
         <button class="btn btn-primary" v-for="answer in question.answers" v-on:click="handleAnswer" :value="answer">
           {{ answer }}
         </button>
@@ -54,8 +52,5 @@ export default {
 <style scoped>
   button {
     margin: 0 1em 1em 0;
-  }
-  .question-panel {
-    text-align: left;
   }
 </style>
