@@ -26,33 +26,31 @@
     tags:
     - verbs
 
-  - q: you watch
+  - q: you watch the TV
     a:
     - tu guardi la televisione
+    - tu guardo la televisione
+    - tu guarda la televisione
     tags:
     - verbs
 
   - q: he watches the TV
     a:
     - lui guarda la televisione
-    tags:
-    - verbs
-
-  - q: he watches the TV
-    a:
-    - lui guarda la televisione
+    - lei guarda la televisione
     tags:
     - verbs
 
   - q: she watches the TV
     a:
     - lei guarda la televisione
+    - lui guarda la televisione
     tags:
     - verbs
 
   - q: we watch the TV
     a:
-    - (noi) guardiamo
+    - (noi) guardiamo la televisione
     tags:
     - verbs
 
@@ -406,7 +404,7 @@
     a:
     - Non lo so!
 
-  - q: I Have No Idea
+  - q: I Have no idea
     a:
     - Non ne ho idea!
 
@@ -420,7 +418,7 @@
 
   - q: How Do You Say "Please" In Italian?
     a:
-    - Come dite “please” in italiano?
+    - Come dite
 
   - q: What Is This?
     a:
@@ -436,7 +434,7 @@
 
   - q: Don't worry!
     a:
-    - non ti preoccupare !
+    - non ti preoccupare!
 
   - q: Good
     a:
