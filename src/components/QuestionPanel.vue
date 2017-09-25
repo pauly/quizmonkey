@@ -8,17 +8,15 @@
           {{ answer }}
         </button>
       </div>
-      <template v-if="previous.question">
-        <template v-if="previous.answer">
-          <div class="alert alert-success" v-if="previous.answer === previous.question.answer">
-            Correct!
-          </div>
-          <div class="alert alert-danger" v-else>
-            <p>Oops!</p>
-            <p>{{previous.question.question}} = {{previous.question.answer}}</p>
-            <p>{{previous.question.trivia}}</p>
-          </div>
-        </template>
+      <template v-if="previous.question && previous.answer">
+        <div class="alert alert-success" v-if="previous.answer === previous.question.answer">
+          Correct!
+        </div>
+        <div class="alert alert-danger" v-else>
+          <p>Oops!</p>
+          <p>{{previous.question.question}} = {{previous.question.answer}}</p>
+          <p>{{previous.question.trivia}}</p>
+        </div>
       </template>
       <pre v-if="inDebug">question: {{JSON.stringify(question, null, 2)}} // for development only</pre>
     </div>
