@@ -24,24 +24,31 @@ export default {
     'category-links': CategoryLinks,
     'question-panel': QuestionPanel
   },
-  methods: {
-    changeCategory(selected) {
-      this.selected = Number(selected)
+  watch: {
+    '$route' (to) {
+      this.selected = Number(to.params.id)
       this.category = allCategories[this.selected]
       this.tags = helpers.getTags(this.category[1])
+      this.setNewQuestion()
+    }
+  },
+  methods: {
+    setNewQuestion() {
       this.question = helpers.randomQuestion(this.category, choices, this.tags)
+    },
+    changeCategory(selected) {
+      this.$router.push(`/category/${selected}`)
     },
     filter(tag) {
       this.tags[tag] = !this.tags[tag]
-      if (!helpers.questionMatchesTags(this.question, this.tags)) {
-        this.question = helpers.randomQuestion(this.category, choices, this.tags)
-      }
+      if (helpers.questionMatchesTags(this.question, this.tags)) return
+      this.setNewQuestion()
     },
     handleAnswer(question, answer) {
       if (answer === question.answer) this.score++
       this.attempts++
       this.previous = { answer, question }
-      this.question = helpers.randomQuestion(this.category, choices, this.tags)
+      this.setNewQuestion()
     }
   },
   data () {

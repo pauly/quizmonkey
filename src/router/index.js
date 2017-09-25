@@ -10,6 +10,11 @@ export default new Router({
       path: '/',
       name: 'Quiz',
       component: Quiz
+    },
+    {
+      path: '/category/:id',
+      name: 'Category',
+      component: Quiz
     }
   ]
 })
