@@ -1,5 +1,5 @@
 <template>
-  <div v-if="categories.length > 1" class="category-links">
+  <div v-if="categories.length > 1">
     <select v-on:change="changeCategory">
       <option></option>
       <option v-for="(category, index) in categories" :selected="index === selected" :value="index">

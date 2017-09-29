@@ -1,5 +1,5 @@
 <template>
-  <div class="question-panel">
+  <div>
     <div>
       <h2>{{ category}} {{ score }} / {{ attempts }}</h2>
       <h3>{{ question.question }}</h3>

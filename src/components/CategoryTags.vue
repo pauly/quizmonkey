@@ -1,6 +1,6 @@
 <template>
-  <div class="category-tags">
-    <label class="checkbox-inline" v-for="(checked, tag) in tags">
+  <div>
+    <label v-for="(checked, tag) in tags">
       <input type="checkbox" v-on:click="filter" :checked="checked && 'checked'" :value="tag" />
       {{ tag }}
     </label>
@@ -20,3 +20,10 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+  label,
+  input {
+    margin: 0 1em 0 0;
+  }
+</style>

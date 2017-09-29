@@ -1,5 +1,5 @@
 <template>
-  <div class="quiz">
+  <div>
     <category-tags :tags=tags @filter=filter />
     <question-panel @handleAnswer=handleAnswer :attempts=attempts :categories=categories :category=category[0] :previous=previous :question=question :score=score />
     <p>{{category[1].length}} questions, {{category[2]}}</p>
