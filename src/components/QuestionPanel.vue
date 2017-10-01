@@ -1,13 +1,11 @@
 <template>
   <div>
     <div>
-      <h2>{{ category}} {{ score }} / {{ attempts }}</h2>
-      <h3>{{ question.question }}</h3>
-      <div class="btn-toolbar">
-        <button class="btn btn-primary" v-for="answer in question.answers" v-on:click="handleAnswer" :value="answer">
-          {{ answer }}
-        </button>
-      </div>
+      <h3>{{ category}} {{ score }} / {{ attempts }}</h3>
+      <h2>{{ question.question }}</h2>
+      <button v-for="answer in question.answers" v-on:click="handleAnswer" :value="answer">
+        {{ answer }}
+      </button>
       <template v-if="previous.question && previous.answer">
         <div class="alert alert-success" v-if="previous.answer === previous.question.answer">
           Correct!
@@ -38,7 +36,6 @@ export default {
   },
   props: {
     attempts: Number,
-    categories: Array,
     category: String,
     previous: Object,
     question: Object,
@@ -50,5 +47,14 @@ export default {
 <style scoped>
   button {
     margin: 0 1em 1em 0;
+    background-color: #337ab7;
+    background-image: linear-gradient(to bottom,#337ab7 0,#265a88 100%);
+    background-repeat: repeat-x;
+    border-color: #245580;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: normal;
+    padding: 6px 12px;
   }
 </style>

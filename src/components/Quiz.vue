@@ -1,7 +1,8 @@
 <template>
   <div>
+    <h1>Quiz monkey</h1>
     <category-tags :tags=tags @filter=filter />
-    <question-panel @handleAnswer=handleAnswer :attempts=attempts :categories=categories :category=category[0] :previous=previous :question=question :score=score />
+    <question-panel @handleAnswer=handleAnswer :attempts=attempts :category=category[0] :previous=previous :question=question :score=score />
     <p>{{category[1].length}} questions, {{category[2]}}</p>
     <category-links :categories=categories @changeCategory=changeCategory :selected=selected />
   </div>
@@ -51,7 +52,7 @@ export default {
       this.setNewQuestion()
     }
   },
-  data () {
+  data() {
     const category = allCategories[0]
     return {
       attempts: 0,
@@ -69,3 +70,35 @@ export default {
   }
 }
 </script>
+
+<style>
+  div, h1, h2, h3, label, p {
+    font-family: arial,verdana,helvetica,sans-serif;
+    font-weight: normal;
+  }
+  h1 {
+    font-size: 1em;
+  }
+  pre, .alert {
+    border: 1px solid;
+    border-radius: 4px;
+    padding: 1em;
+    background-repeat: repeat-x;
+  }
+  .alert-danger {
+    color: #a94442;
+    background-image: linear-gradient(to bottom,#f2dede 0,#e7c3c3 100%);
+    background-color: #f2dede;
+    border-color: #dca7a7;
+  }
+  .alert-success {
+    background-image: linear-gradient(to bottom,#dff0d8 0,#c8e5bc 100%);
+    border-color: #3c763d;
+    background-color: #dff0d8;
+    color: #3c763d;
+  }
+  pre {
+    background-color: #eee;
+    border: 1px solid #ccc;
+  }
+</style>
