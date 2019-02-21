@@ -1,10 +1,11 @@
 #!/usr/bin/env node
 'use strict'
 
-var path = require('path')
-var fs = require('fs')
-var YAML = require('yamljs')
-var dataDir = path.resolve(__dirname, '../data')
+const path = require('path')
+const fs = require('fs')
+const YAML = require('yamljs')
+const dataDir = path.resolve(__dirname, '../data')
+const buildDir = path.resolve(__dirname, '../docs')
 
 try {
   if (process.argv.length > 2) {
@@ -13,12 +14,15 @@ try {
   }
   fs.readdir(dataDir, function (err, data) {
     if (err) throw err
-    data.forEach(function (file) {
+    data.forEach((file, index) => {
       if (!/\.yml$/.exec(file)) return
 
-      var ymlFile = path.join(dataDir, file)
-      var jsonFile = ymlFile.replace(/\.yml$/, '.json')
-      fs.writeFileSync(jsonFile, JSON.stringify(YAML.load(ymlFile)))
+      const ymlFile = path.join(dataDir, file)
+      const jsonFile = ymlFile.replace(/\.yml$/, '.json')
+      const json = JSON.stringify(YAML.load(ymlFile), null, 2)
+      fs.writeFileSync(jsonFile, json)
+      const buildFile = path.join(buildDir, `${index}.json`)
+      fs.writeFileSync(buildFile, json)
     })
     process.exit(0)
   })

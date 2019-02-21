@@ -13,7 +13,7 @@ import CategoryTags from './CategoryTags'
 import QuestionPanel from './QuestionPanel'
 import CategoryLinks from './CategoryLinks'
 import helpers from '../lib/helpers'
-import allCategories from '../../data/data'
+import allCategories from '../../data'
 
 const categories = allCategories.map(option => option.title || option[0])
 const choices = 4
@@ -27,7 +27,29 @@ export default {
   },
   watch: {
     '$route' (to) {
-      this.selected = Number(to.params.id)
+      const newCategoryID = Number(to.params.id)
+      console.log(`changing to ${newCategoryID} fetch ${newCategoryID}.json`, allCategories[newCategoryID])
+      /* if (!allCategories[newCategoryID][1]) { // there is a title but no questions...
+        if (!window.fetch) {
+          console.error('requires window.fetch, sorry...')
+        }
+        return window.fetch(`${newCategoryID}.json`)
+          .then(response => {
+            console.log('got response', response, response.text())
+            return response.json()
+          })
+          .then(json => {
+            console.log('got json data', json)
+            this.selected = newCategoryID
+            this.category = allCategories[this.selected]
+            this.tags = helpers.getTags(this.category[1])
+            this.setNewQuestion()
+          })
+          .catch(err => {
+            console.error('hmm error fetching data', err)
+          })
+      } */
+      this.selected = newCategoryID
       this.category = allCategories[this.selected]
       this.tags = helpers.getTags(this.category[1])
       this.setNewQuestion()

@@ -31,7 +31,15 @@ export default {
   },
   methods: {
     handleAnswer(event) {
+      console.log('handling answer', event)
+      clearTimeout(this.timeout)
       this.$emit('handleAnswer', this.question, event.srcElement.value)
+    },
+    passAfterTimeout() {
+      this.timeout = setTimeout(function () {
+        console.log('10 seconds passed')
+        this.$emit('handleAnswer', this.question, 'x')
+      }.bind(this), 10000)
     }
   },
   props: {
@@ -40,6 +48,14 @@ export default {
     previous: Object,
     question: Object,
     score: Number
+  },
+  mounted () {
+    console.log('mounted, setting timeout')
+    this.passAfterTimeout()
+  },
+  updated () {
+    console.log('updated, setting timeout')
+    this.passAfterTimeout()
   }
 }
 </script>
