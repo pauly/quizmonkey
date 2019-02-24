@@ -1,9 +1,9 @@
 <template>
   <div>
-    <h1>Quiz monkey</h1>
+    <h1>Quiz monkey 🙊</h1>
     <category-tags :tags=tags @filter=filter />
     <question-panel @handleAnswer=handleAnswer :attempts=attempts :category=category[0] :previous=previous :question=question :score=score />
-    <p>{{category[1].length}} questions, {{category[2]}}</p>
+    <p>{{category[1] && category[1].length}} questions, {{category[2]}}</p>
     <category-links :categories=categories @changeCategory=changeCategory :selected=selected />
   </div>
 </template>
@@ -29,26 +29,26 @@ export default {
     '$route' (to) {
       const newCategoryID = Number(to.params.id)
       console.log(`changing to ${newCategoryID} fetch ${newCategoryID}.json`, allCategories[newCategoryID])
-      /* if (!allCategories[newCategoryID][1]) { // there is a title but no questions...
-        if (!window.fetch) {
-          console.error('requires window.fetch, sorry...')
+      if (!allCategories[newCategoryID][1]) { // there is a title but no questions...
+        function get (url, callback, request) {
+          request = new XMLHttpRequest() // sorry ie6 etc
+          request.open('GET', url, true)
+          request.onreadystatechange = function () {
+            if (request.readyState == 4 && request.status == 200) { // eslint-disable-line eqeqeq
+              callback(request.responseText)
+            }
+          }
+          request.send()
         }
-        return window.fetch(`${newCategoryID}.json`)
-          .then(response => {
-            console.log('got response', response, response.text())
-            return response.json()
-          })
-          .then(json => {
-            console.log('got json data', json)
-            this.selected = newCategoryID
-            this.category = allCategories[this.selected]
-            this.tags = helpers.getTags(this.category[1])
-            this.setNewQuestion()
-          })
-          .catch(err => {
-            console.error('hmm error fetching data', err)
-          })
-      } */
+        return get(`${newCategoryID}.json`, json => {
+          console.log('got json data', json)
+          json = JSON.parse(json)
+          this.selected = newCategoryID
+          this.category = allCategories[this.selected] = json
+          this.tags = helpers.getTags(this.category[1])
+          this.setNewQuestion()
+        })
+      }
       this.selected = newCategoryID
       this.category = allCategories[this.selected]
       this.tags = helpers.getTags(this.category[1])
